@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 **Namespace:** `mam`
-**Total Systems:** 13 Spell Schools | 13 Ritual Categories | 21 Gemstone Variants
+**Total Systems:** 13 Spell Schools | 13 Ritual Categories | 15 Gemstone Variants
 
 ---
 
@@ -13,7 +13,6 @@
   - [🔮 Spell Schools](#-spell-schools)
   - [🌟 Ritual Categories](#-ritual-categories)
   - [💎 Gemstone Compendium](#-gemstone-compendium)
-    - [Legendary Tier](#legendary-tier)
     - [Epic Tier](#epic-tier)
     - [Rare Tier](#rare-tier)
     - [Uncommon Tier](#uncommon-tier)
@@ -37,51 +36,45 @@
 
 ## 🔮 Spell Schools
 
-| Symbol | School      | Color       | Hex Code  | Focus                   | Primary Gemstones                       |
-| :----: | ----------- | ----------- | --------- | ----------------------- | --------------------------------------- |
-|   🌀   | **Air**     | Light Gray  | `#C0C0C0` | Mobility & Speed        | Moonstone, Diamond                      |
-|   🔮   | **Arcane**  | Purple      | `#9966CC` | Utility & Manipulation  | Amethyst Shard, Tanzanite, Lapis Lazuli |
-|   🩸   | **Blood**   | Dark Red    | `#8B0000` | Sacrifice for Power     | Ruby, Carnelian                         |
-|   🌪️   | **Chaos**   | Magenta     | `#FF00FF` | Unpredictable Effects   | Tourmaline, Rhodonite                   |
-|   🌑   | **Dark**    | Dark Purple | `#2D1B4E` | DOT & Curses            | Sodalite, Hematite                      |
-|   🌍   | **Earth**   | Brown       | `#8B4513` | Defense & Stability     | Hematite, Jade, Peridot                 |
-|   🔥   | **Fire**    | Orange      | `#FF4500` | Damage & Destruction    | Ruby, Carnelian, Topaz                  |
-|   ❄️   | **Ice**     | Cyan        | `#00FFFF` | Control & Freezing      | Sapphire, Aquamarine, Apatite           |
-|   ✨   | **Light**   | Pale Yellow | `#FFF8DC` | Holy Power & Protection | Citrine, Topaz, Diamond                 |
-|   🌿   | **Nature**  | Green       | `#228B22` | Growth & Life           | Emerald, Jade, Peridot                  |
-|   ⚡   | **Thunder** | Yellow      | `#FFD700` | Burst Damage & Energy   | Citrine, Topaz                          |
-|   🕳️   | **Void**    | Black       | `#000000` | Dimensional Magic       | Tanzanite, Hematite                     |
-|   💧   | **Water**   | Blue        | `#1E90FF` | Healing & Purification  | Apatite, Aquamarine, Prismarine Shard   |
+| Symbol | School      | Color       | Hex Code  | Focus                   | Primary Gemstones             |
+| :----: | ----------- | ----------- | --------- | ----------------------- | ----------------------------- |
+|   🌀   | **Air**     | Light Gray  | `#C0C0C0` | Mobility & Speed        | Moonstone                     |
+|   🔮   | **Arcane**  | Purple      | `#9966CC` | Utility & Manipulation  | Tanzanite                     |
+|   🩸   | **Blood**   | Dark Red    | `#8B0000` | Sacrifice for Power     | Ruby, Carnelian               |
+|   🌪️   | **Chaos**   | Magenta     | `#FF00FF` | Unpredictable Effects   | Tourmaline, Rhodonite         |
+|   🌑   | **Dark**    | Dark Purple | `#2D1B4E` | DOT & Curses            | Sodalite, Hematite            |
+|   🌍   | **Earth**   | Brown       | `#8B4513` | Defense & Stability     | Hematite, Jade, Peridot       |
+|   🔥   | **Fire**    | Orange      | `#FF4500` | Damage & Destruction    | Ruby, Carnelian, Topaz        |
+|   ❄️   | **Ice**     | Cyan        | `#00FFFF` | Control & Freezing      | Sapphire, Aquamarine, Apatite |
+|   ✨   | **Light**   | Pale Yellow | `#FFF8DC` | Holy Power & Protection | Citrine, Topaz                |
+|   🌿   | **Nature**  | Green       | `#228B22` | Growth & Life           | Jade, Peridot                 |
+|   ⚡   | **Thunder** | Yellow      | `#FFD700` | Burst Damage & Energy   | Citrine, Topaz                |
+|   🕳️   | **Void**    | Black       | `#000000` | Dimensional Magic       | Tanzanite, Hematite           |
+|   💧   | **Water**   | Blue        | `#1E90FF` | Healing & Purification  | Apatite, Aquamarine           |
 
 ---
 
 ## 🌟 Ritual Categories
 
-|  Symbol  | Category           | Color        | Hex Code  | Focus                       | Primary Gemstones                          |
-| :------: | ------------------ | ------------ | --------- | --------------------------- | ------------------------------------------ |
-|    🔺    | **Ascension**      | Gold         | `#FFD700` | Transcendence & Empowerment | Diamond, Citrine, Topaz                    |
-|    ⭕    | **Circle**         | White        | `#FFFFFF` | Bounded Magic & Protection  | Moonstone, Diamond                         |
-|    🌌    | **Cosmic**         | Deep Purple  | `#4B0082` | Celestial Alignment         | Tanzanite, Sapphire, Moonstone             |
-| 🔥💧🌿⚡ | **Elemental**      | Rainbow      | `#FF6B6B` | Multi-Element Fusion        | Tourmaline, Emerald, Ruby, Sapphire        |
-|    ⛲    | **Fountain**       | Aqua         | `#00CED1` | Continuous Flow             | Prismarine Shard, Aquamarine, Lapis Lazuli |
-|    🌐    | **Planar**         | Silver       | `#C0C0C0` | Dimension Manipulation      | Tanzanite, Amethyst Shard                  |
-|    🔄    | **Reality**        | Prismatic    | `#E0E0E0` | World Alteration            | Diamond, Nether Quartz, Tourmaline         |
-|    💫    | **Resurrection**   | Golden White | `#FFF9E3` | Life Restoration            | Diamond, Rhodonite, Citrine                |
-|    🗡️    | **Sacrifice**      | Crimson      | `#DC143C` | Power through Offering      | Ruby, Carnelian, Hematite                  |
-|    👻    | **Summoning**      | Dark Purple  | `#6A0DAD` | Entity Calling              | Sodalite, Tanzanite, Hematite              |
-|    ⏰    | **Temporal**       | Bronze       | `#CD7F32` | Time Manipulation           | Amethyst Shard, Moonstone, Nether Quartz   |
-|    🦋    | **Transformation** | Violet       | `#8F00FF` | Form Alteration             | Jade, Peridot, Tourmaline                  |
-|    🌀    | **Vortex**         | Storm Gray   | `#708090` | Spiraling Force             | Apatite, Sodalite                          |
+|  Symbol  | Category           | Color        | Hex Code  | Focus                       | Primary Gemstones              |
+| :------: | ------------------ | ------------ | --------- | --------------------------- | ------------------------------ |
+|    🔺    | **Ascension**      | Gold         | `#FFD700` | Transcendence & Empowerment | Citrine, Topaz                 |
+|    ⭕    | **Circle**         | White        | `#FFFFFF` | Bounded Magic & Protection  | Moonstone                      |
+|    🌌    | **Cosmic**         | Deep Purple  | `#4B0082` | Celestial Alignment         | Tanzanite, Sapphire, Moonstone |
+| 🔥💧🌿⚡ | **Elemental**      | Rainbow      | `#FF6B6B` | Multi-Element Fusion        | Tourmaline, Ruby, Sapphire     |
+|    ⛲    | **Fountain**       | Aqua         | `#00CED1` | Continuous Flow             | Aquamarine                     |
+|    🌐    | **Planar**         | Silver       | `#C0C0C0` | Dimension Manipulation      | Tanzanite                      |
+|    🔄    | **Reality**        | Prismatic    | `#E0E0E0` | World Alteration            | Tourmaline                     |
+|    💫    | **Resurrection**   | Golden White | `#FFF9E3` | Life Restoration            | Rhodonite, Citrine             |
+|    🗡️    | **Sacrifice**      | Crimson      | `#DC143C` | Power through Offering      | Ruby, Carnelian, Hematite      |
+|    👻    | **Summoning**      | Dark Purple  | `#6A0DAD` | Entity Calling              | Sodalite, Tanzanite, Hematite  |
+|    ⏰    | **Temporal**       | Bronze       | `#CD7F32` | Time Manipulation           | Moonstone                      |
+|    🦋    | **Transformation** | Violet       | `#8F00FF` | Form Alteration             | Jade, Peridot, Tourmaline      |
+|    🌀    | **Vortex**         | Storm Gray   | `#708090` | Spiraling Force             | Apatite, Sodalite              |
 
 ---
 
 ## 💎 Gemstone Compendium
-
-### Legendary Tier
-
-| Gemstone    | Color      | Hex       | Shape   | Affinity   | Schools    | Rituals                                  |
-| ----------- | ---------- | --------- | ------- | ---------- | ---------- | ---------------------------------------- |
-| **Diamond** | Cyan White | `#5DCFCF` | Octagon | Durability | Light, Air | Ascension, Circle, Reality, Resurrection |
 
 ### Epic Tier
 
@@ -93,29 +86,24 @@
 
 ### Rare Tier
 
-| Gemstone             | Color         | Hex       | Shape   | Affinity | Schools              | Rituals                            |
-| -------------------- | ------------- | --------- | ------- | -------- | -------------------- | ---------------------------------- |
-| **Apatite**          | Cyan Blue     | `#2DD4DB` | Round   | Water    | Water, Ice           | Vortex, Fountain                   |
-| **Aquamarine**       | Light Blue    | `#7DD3E8` | Diamond | Water    | Water, Ice           | Fountain                           |
-| **Emerald**          | Vibrant Green | `#50C878` | Octagon | Nature   | Nature               | Elemental                          |
-| **Moonstone**        | Pearly White  | `#E8E5E0` | Oval    | Lunar    | Air                  | Circle, Cosmic, Temporal           |
-| **Prismarine Shard** | Aqua Teal     | `#5AB5A5` | Crystal | Ocean    | Water                | Fountain                           |
-| **Rhodonite**        | Rose Pink     | `#D66B88` | Round   | Healing  | Chaos                | Resurrection                       |
-| **Topaz**            | Amber Orange  | `#D98736` | Oval    | Solar    | Light, Thunder, Fire | Ascension                          |
-| **Tourmaline**       | Forest Green  | `#3A7C59` | Round   | Balance  | Chaos                | Elemental, Reality, Transformation |
+| Gemstone       | Color        | Hex       | Shape   | Affinity | Schools              | Rituals                            |
+| -------------- | ------------ | --------- | ------- | -------- | -------------------- | ---------------------------------- |
+| **Apatite**    | Cyan Blue    | `#2DD4DB` | Round   | Water    | Water, Ice           | Vortex, Fountain                   |
+| **Aquamarine** | Light Blue   | `#7DD3E8` | Diamond | Water    | Water, Ice           | Fountain                           |
+| **Moonstone**  | Pearly White | `#E8E5E0` | Oval    | Lunar    | Air                  | Circle, Cosmic, Temporal           |
+| **Rhodonite**  | Rose Pink    | `#D66B88` | Round   | Healing  | Chaos                | Resurrection                       |
+| **Topaz**      | Amber Orange | `#D98736` | Oval    | Solar    | Light, Thunder, Fire | Ascension                          |
+| **Tourmaline** | Forest Green | `#3A7C59` | Round   | Balance  | Chaos                | Elemental, Reality, Transformation |
 
 ### Uncommon Tier
 
-| Gemstone           | Color         | Hex       | Shape   | Affinity    | Schools        | Rituals                 |
-| ------------------ | ------------- | --------- | ------- | ----------- | -------------- | ----------------------- |
-| **Amethyst Shard** | Purple        | `#9966CC` | Crystal | Arcane      | Arcane         | Temporal, Planar        |
-| **Carnelian**      | Orange Red    | `#E86938` | Round   | Fire        | Fire, Blood    | Sacrifice               |
-| **Citrine**        | Golden Yellow | `#F4B942` | Octagon | Light       | Light, Thunder | Ascension, Resurrection |
-| **Jade**           | Medium Green  | `#5FA777` | Round   | Nature      | Nature, Earth  | Transformation          |
-| **Lapis Lazuli**   | Deep Blue     | `#1E488F` | Round   | Enchantment | Arcane         | Fountain                |
-| **Nether Quartz**  | Cream White   | `#E4D4C8` | Crystal | Nether      | —              | Reality, Temporal       |
-| **Peridot**        | Lime Green    | `#A4D65E` | Round   | Nature      | Nature, Earth  | Transformation          |
-| **Sodalite**       | Navy Blue     | `#3D5A9C` | Round   | Mind        | Dark           | Summoning, Vortex       |
+| Gemstone      | Color         | Hex       | Shape   | Affinity | Schools        | Rituals                 |
+| ------------- | ------------- | --------- | ------- | -------- | -------------- | ----------------------- |
+| **Carnelian** | Orange Red    | `#E86938` | Round   | Fire     | Fire, Blood    | Sacrifice               |
+| **Citrine**   | Golden Yellow | `#F4B942` | Octagon | Light    | Light, Thunder | Ascension, Resurrection |
+| **Jade**      | Medium Green  | `#5FA777` | Round   | Nature   | Nature, Earth  | Transformation          |
+| **Peridot**   | Lime Green    | `#A4D65E` | Round   | Nature   | Nature, Earth  | Transformation          |
+| **Sodalite**  | Navy Blue     | `#3D5A9C` | Round   | Mind     | Dark           | Summoning, Vortex       |
 
 ### Common Tier
 
@@ -129,19 +117,19 @@
 
 ### By Spell School
 
-- **Air**: Moonstone, Diamond
-- **Arcane**: Amethyst Shard, Tanzanite, Lapis Lazuli
+- **Air**: Moonstone
+- **Arcane**: Tanzanite
 - **Blood**: Ruby, Carnelian
 - **Chaos**: Tourmaline, Rhodonite
 - **Dark**: Sodalite, Hematite
 - **Earth**: Hematite, Jade, Peridot
 - **Fire**: Ruby, Carnelian, Topaz
 - **Ice**: Sapphire, Aquamarine, Apatite
-- **Light**: Citrine, Topaz, Diamond
-- **Nature**: Emerald, Jade, Peridot
+- **Light**: Citrine, Topaz
+- **Nature**: Jade, Peridot
 - **Thunder**: Citrine, Topaz
 - **Void**: Tanzanite, Hematite
-- **Water**: Apatite, Aquamarine, Prismarine Shard
+- **Water**: Apatite, Aquamarine
 
 ---
 
@@ -149,17 +137,17 @@
 
 ### By Ritual Category
 
-- **Ascension**: Diamond, Citrine, Topaz
-- **Circle**: Moonstone, Diamond
+- **Ascension**: Citrine, Topaz
+- **Circle**: Moonstone
 - **Cosmic**: Tanzanite, Sapphire, Moonstone
-- **Elemental**: Tourmaline, Emerald, Ruby, Sapphire
-- **Fountain**: Prismarine Shard, Aquamarine, Lapis Lazuli
-- **Planar**: Tanzanite, Amethyst Shard
-- **Reality**: Diamond, Nether Quartz, Tourmaline
-- **Resurrection**: Diamond, Rhodonite, Citrine
+- **Elemental**: Tourmaline, Ruby, Sapphire
+- **Fountain**: Aquamarine
+- **Planar**: Tanzanite
+- **Reality**: Tourmaline
+- **Resurrection**: Rhodonite, Citrine
 - **Sacrifice**: Ruby, Carnelian, Hematite
 - **Summoning**: Sodalite, Tanzanite, Hematite
-- **Temporal**: Amethyst Shard, Moonstone, Nether Quartz
+- **Temporal**: Moonstone
 - **Transformation**: Jade, Peridot, Tourmaline
 - **Vortex**: Apatite, Sodalite
 
@@ -172,37 +160,23 @@ mam/
 ├── src/main/resources/
 │   ├── assets/mam/
 │   │   ├── blockstates/
-│   │   │   ├── deepslate_emerald_ore.json
-│   │   │   ├── emerald_block.json
-│   │   │   ├── emerald_ore.json
 │   │   │   └── gemstone_ore.json
 │   │   ├── models/
 │   │   │   ├── block/
-│   │   │   │   ├── deepslate_emerald_ore.json
-│   │   │   │   ├── emerald_block.json
-│   │   │   │   ├── emerald_ore.json
 │   │   │   │   └── gemstone_ore.json
 │   │   │   └── item/
-│   │   │       ├── emerald.json
-│   │   │       └── gemstones/*.json (21 files)
+│   │   │       └── gemstones/*.json (15 files)
 │   │   └── textures/
 │   │       ├── block/
-│   │       │   ├── deepslate_emerald_ore.png
-│   │       │   ├── emerald_block.png
-│   │       │   ├── emerald_ore.png
 │   │       │   └── gemstone_ore.png
 │   │       ├── gui/sprites/container/slot/
-│   │       │   └── gemstone_slots/*.png (21 files)
+│   │       │   └── gemstone_slots/*.png (15 files)
 │   │       └── item/gemstones/
-│   │           └── *.png (21 gemstone textures)
+│   │           └── *.png (15 gemstone textures)
 │   └── data/mam/
 │       ├── loot_table/blocks/
-│       │   ├── deepslate_emerald_ore.json
-│       │   ├── emerald_block.json
-│       │   ├── emerald_ore.json
 │       │   └── gemstone_ore.json
 │       ├── recipe/
-│       │   ├── emerald_*.json (crafting recipes)
 │       │   └── gemstone_*.json (gemstone recipes)
 │       ├── rituals/
 │       │   ├── ascension/
@@ -280,17 +254,13 @@ mam/
 │       │       └── water_strike.json
 │       ├── tags/
 │       │   ├── block/
-│       │   │   ├── emerald_ores.json
 │       │   │   └── gemstone_ores.json
 │       │   └── item/
-│       │       ├── emerald_ores.json
 │       │       └── gemstone_ores.json
 │       └── worldgen/
 │           ├── configured_feature/
-│           │   ├── ore_emerald.json
 │           │   └── ore_gemstone.json
 │           └── placed_feature/
-│               ├── ore_emerald.json
 │               └── ore_gemstone.json
 ```
 
@@ -376,12 +346,11 @@ mam/
 
 - **Total Spell Schools**: 13
 - **Total Ritual Categories**: 13
-- **Total Gemstone Variants**: 21
+- **Total Gemstone Variants**: 15
 - **Rarity Distribution**:
-  - Legendary: 1 (Diamond)
   - Epic: 3 (Ruby, Sapphire, Tanzanite)
-  - Rare: 8
-  - Uncommon: 8
+  - Rare: 6 (Apatite, Aquamarine, Moonstone, Rhodonite, Topaz, Tourmaline)
+  - Uncommon: 5 (Carnelian, Citrine, Jade, Peridot, Sodalite)
   - Common: 1 (Hematite)
 
 ---
@@ -394,17 +363,15 @@ Hematite, Carnelian, Citrine, Jade, Sodalite
 
 ### Intermediate Gemstones (Levels 11-30)
 
-Amethyst Shard, Lapis Lazuli, Peridot, Nether Quartz, Moonstone
+Peridot, Moonstone
 
 ### Advanced Gemstones (Levels 31-50)
 
-Apatite, Aquamarine, Emerald, Topaz, Rhodonite, Tourmaline, Prismarine Shard
+Apatite, Aquamarine, Topaz, Rhodonite, Tourmaline
 
 ### Expert Gemstones (Levels 51+)
 
-Ruby, Sapphire, Tanzanite, Diamond
-
----
+Ruby, Sapphire, Tanzanite
 
 **Last Updated**: December 27, 2025
 **Mod Author**: Mosberg

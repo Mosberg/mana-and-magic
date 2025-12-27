@@ -80,6 +80,6 @@ public final class MamItems {
 
         public static void register() {
                 ManaAndMagic.LOGGER.info(
-                                "✅ Registered 21 unique gemstone items (vanilla conflict-free)");
+                                "✅ Registered 15 unique gemstone items (vanilla conflict-free)");
         }
 }

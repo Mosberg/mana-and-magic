@@ -134,18 +134,17 @@ class GemstoneTest {
         @Test
         @DisplayName("Legendary tier should contain powerful gemstones")
         void testLegendaryGemstones() {
-            List<String> legendaryGemstones = List.of("Tanzanite", "Arcane Diamond");
-            assertEquals(2, legendaryGemstones.size());
-            assertTrue(legendaryGemstones.contains("Tanzanite"));
+            List<String> legendaryGemstones = List.of("Arcane Diamond");
+            assertEquals(1, legendaryGemstones.size());
             assertTrue(legendaryGemstones.contains("Arcane Diamond"));
         }
 
         @Test
         @DisplayName("Epic tier should contain powerful gemstones")
         void testEpicGemstones() {
-            List<String> epicGemstones = Arrays.asList("Ruby", "Sapphire", "Topaz");
+            List<String> epicGemstones = Arrays.asList("Ruby", "Sapphire", "Tanzanite");
             assertEquals(3, epicGemstones.size());
-            assertTrue(epicGemstones.containsAll(List.of("Ruby", "Sapphire", "Topaz")));
+            assertTrue(epicGemstones.containsAll(List.of("Ruby", "Sapphire", "Tanzanite")));
         }
     }
 }

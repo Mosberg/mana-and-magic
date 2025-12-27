@@ -31,7 +31,13 @@ public enum GemstoneRarity {
         return formatting;
     }
 
+    /**
+     * Gets the localized and formatted name of this rarity.
+     *
+     * @return the formatted rarity name
+     * @since 1.0.0
+     */
     public Text getName() {
-        return Text.literal(name().toLowerCase());
+        return Text.translatable("rarity.mam." + name().toLowerCase()).formatted(formatting);
     }
 }

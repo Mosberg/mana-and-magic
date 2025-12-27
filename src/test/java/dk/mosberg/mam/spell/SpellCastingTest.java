@@ -28,7 +28,6 @@ class SpellCastingTest {
     @Test
     @DisplayName("Should cast spell when player has enough mana")
     void testCastSpellWithSufficientMana() {
-        // TODO: Implement when spell system is ready
         assertTrue(true, "Placeholder test - implement when spell system is ready");
     }
 

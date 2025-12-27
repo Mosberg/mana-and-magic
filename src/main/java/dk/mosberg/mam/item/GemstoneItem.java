@@ -41,7 +41,7 @@ public class GemstoneItem extends Item {
     }
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip,
-            TooltipContext context) {
+            Item.TooltipContext context) {
         tooltip.add(Text.literal("Rarity: " + rarity.getName()).formatted(rarity.getFormatting()));
         tooltip.add(Text.literal("School: " + school.getName()).formatted(school.getColor()));
         tooltip.add(Text.literal("Mana: " + manaCapacity).formatted(rarity.getFormatting()));

@@ -26,7 +26,14 @@ public enum GemstoneSchool {
         return color;
     }
 
+    /**
+     * Returns the resource ID for this school in snake_case.
+     *
+     * @return the school name in snake_case
+     * @since 1.0.0
+     */
     public String getName() {
+        // Convert enum name (e.g., DARK_GREEN) to snake_case (dark_green)
         return name().toLowerCase();
     }
 }

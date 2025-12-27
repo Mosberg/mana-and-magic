@@ -65,6 +65,7 @@ class ManaAndMagicTest {
     }
 
 
+    @Test
     @DisplayName("Should validate spell school names")
     void testSpellSchoolNames() {
         String[] spellSchools = {"Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
