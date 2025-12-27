@@ -1,14 +1,23 @@
 package dk.mosberg.mam;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 /**
- * Comprehensive test suite demonstrating JUnit 6 features for the Magic System.
- * Tests mod initialization, configuration, and basic validation logic.
+ * Comprehensive test suite demonstrating JUnit 6 features for the Magic System. Tests mod
+ * initialization, configuration, and basic validation logic.
  *
  * @author Mosberg
  * @version 1.0.0
@@ -111,11 +120,9 @@ class ManaAndMagicTest {
         @Test
         @DisplayName("Should validate ritual names")
         void testRitualNames() {
-            String[] ritualNames = {
-                "Ascension", "Circle", "Cosmic", "Elemental", "Fountain",
-                "Planar", "Reality", "Resurrection", "Sacrifice", "Summoning",
-                "Temporal", "Transformation", "Vortex"
-            };
+            String[] ritualNames = {"Ascension", "Circle", "Cosmic", "Elemental", "Fountain",
+                    "Planar", "Reality", "Resurrection", "Sacrifice", "Summoning", "Temporal",
+                    "Transformation", "Vortex"};
             assertEquals(13, ritualNames.length, "Should have 13 ritual types");
             for (String name : ritualNames) {
                 assertNotNull(name);

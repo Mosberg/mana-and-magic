@@ -1,15 +1,18 @@
 package dk.mosberg.mam.spell;
 
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
-
 /**
- * Advanced test suite demonstrating Mockito mocking framework for spell casting.
- * Tests spell execution, mana consumption, and error handling scenarios.
+ * Advanced test suite demonstrating Mockito mocking framework for spell casting. Tests spell
+ * execution, mana consumption, and error handling scenarios.
  *
  * @author Mosberg
  * @version 1.0.0
