@@ -55,6 +55,7 @@ despawn
 Despawn
 devmode
 Dfabric
+displayname
 dists
 Dlog
 Dmixin
@@ -228,6 +229,7 @@ Terraformers
 terraformersmc
 tessellator
 Tessellator
+testinstance
 thirdperson
 ticle
 tippedarrow

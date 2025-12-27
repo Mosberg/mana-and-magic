@@ -1,10 +1,3 @@
-# Improved \& Optimized Copilot Instructions
-
-Here's a dramatically enhanced version with **clear structure, actionable workflows, and technical precision**:
-
----
-
-```md
 # Copilot Instructions: Arcane Magic System - Mana and Magic
 
 **Version:** 1.0.0
@@ -29,6 +22,7 @@ This is a **Fabric-based Minecraft mod** implementing a comprehensive **data-dri
 ## 📁 Critical Directories
 
 ### Java Source Code
+
 ```
 
 src/main/java/dk/mosberg/mam/
@@ -57,6 +51,7 @@ src/client/java/dk/mosberg/mam/client/
 ```
 
 ### Resource Assets (Client-Side)[file:16]
+
 ```
 
 src/main/resources/assets/mam/
@@ -76,6 +71,7 @@ src/main/resources/assets/mam/
 ```
 
 ### Game Data (Server-Side)[file:16]
+
 ```
 
 src/main/resources/data/mam/
@@ -100,6 +96,7 @@ src/main/resources/data/mam/
 ```
 
 ### Documentation (Source of Truth)[file:18]
+
 ```
 
 docs/
@@ -122,18 +119,22 @@ docs/
 ## 🏗️ Architecture & Design Patterns[file:10]
 
 ### Code Standards
+
 - **Naming:** Java (PascalCase classes, camelCase methods, UPPER_SNAKE_CASE constants), JSON (snake_case resource IDs)
 - **Formatting:** 4-space indent (Java), 2-space indent (JSON), 120 char max line length
 - **Documentation:** Comprehensive Javadoc with `@param`, `@return`, `@throws`, `@example`, `@since 1.0.0`, `@author Mosberg`
 - **Safety:** `@Nullable`/`@NotNull` annotations, parameter validation, SLF4J logging
 
 ### Data-Driven Content
+
 - **All spells, rituals, and gemstones are JSON-defined**[file:18]
 - Adding new content requires **zero Java code changes** (only JSON/asset updates)
 - Templates: Use existing emerald/gemstone files as copy-paste bases
 
 ### Consistency Requirements
+
 **Critical:** Resource IDs must match across **all** locations:
+
 - Blockstates (`assets/mam/blockstates/gemstone_ore.json`)
 - Models (`assets/mam/models/block/gemstone_ore.json`)
 - Textures (`assets/mam/textures/block/gemstone_ore.png`)
@@ -150,29 +151,36 @@ docs/
 **Goal:** Create a new gemstone variant (e.g., "Onyx")
 
 **Steps:**
+
 1. **Update Documentation**
+
    - Add row to `docs/csv/gemstones.csv` with properties (name, color, hex, shape, rarity, affinity, schools, rituals)
    - Update `docs/json/magic_system_master.json` gemstones array
 
 2. **Create Item Model & Texture**
+
    - Copy `assets/mam/models/item/gemstones/ruby.json` → `onyx.json`
    - Edit texture path: `"layer0": "mam:item/gemstones/onyx"`
    - Create `assets/mam/textures/item/gemstones/onyx.png` (16x16 pixel texture)
    - Create `assets/mam/textures/gui/sprites/container/slot/gemstones/onyx.png` (slot icon)
 
 3. **Add Crafting Recipes (Optional)**
+
    - Copy `data/mam/recipe/emerald_from_smelting_emerald_ore.json`
    - Replace all `emerald` references with `onyx`
 
 4. **Tag Integration**
+
    - Add `"mam:onyx"` to `data/mam/tags/item/gemstone_ores.json`
 
 5. **Worldgen (If Ore-Based)**
+
    - Update `data/mam/worldgen/configured_feature/ore_gemstone.json` state list
    - Adjust spawn rates in `data/mam/worldgen/placed_feature/ore_gemstone.json`
 
 6. **Java Registration** (If Custom Item)
    - Add to `src/main/java/dk/mosberg/mam/item/ModItems.java`:
+
 ```
 
 public static final Item ONYX = Registry.register(
@@ -188,8 +196,11 @@ new Item(new Item.Settings())
 **Goal:** Add a spell to an existing school (e.g., "Meteor Strike" for Fire school)
 
 **Steps:**
+
 1. **Define Spell JSON**
+
 - Create `data/mam/spells/fire/meteor_strike.json`:
+
 ```
 
 {
@@ -215,12 +226,15 @@ new Item(new Item.Settings())
 ```
 
 2. **Implement Spell Logic** (Java)
+
 - Create `src/main/java/dk/mosberg/mam/spell/fire/MeteorStrikeSpell.java`
 - Extend `Spell` base class
 - Implement `cast()` method with projectile logic
 
 3. **Register Spell**
+
 - Add to `ManaAndMagic.registerSpells()`:
+
 ```
 
 SpellRegistry.register(new MeteorStrikeSpell());
@@ -228,7 +242,9 @@ SpellRegistry.register(new MeteorStrikeSpell());
 ```
 
 4. **Add Translation**
+
 - Update `assets/mam/lang/en_us.json`:
+
 ```
 
 "spell.mam.meteor_strike": "Meteor Strike",
@@ -241,8 +257,11 @@ SpellRegistry.register(new MeteorStrikeSpell());
 **Goal:** Create a ritual (e.g., "Dragon Awakening" for Summoning category)
 
 **Steps:**
+
 1. **Define Ritual JSON**
+
 - Create `data/mam/rituals/summoning/dragon_awakening.json`:
+
 ```
 
 {
@@ -274,11 +293,13 @@ SpellRegistry.register(new MeteorStrikeSpell());
 ```
 
 2. **Implement Ritual Logic**
+
 - Create `src/main/java/dk/mosberg/mam/ritual/summoning/DragonAwakeningRitual.java`
 - Implement pattern validation
 - Handle dragon entity spawning
 
 3. **Test In-Game**
+
 - Build ritual structure in The End
 - Verify pattern recognition
 - Test dragon summoning mechanics
@@ -288,20 +309,26 @@ SpellRegistry.register(new MeteorStrikeSpell());
 ## 🔗 System Interconnections[file:18]
 
 ### Gemstone → Spell School Mappings
+
 Each gemstone links to 1-3 spell schools:
+
 - **Ruby** (Epic) → Fire, Blood
 - **Sapphire** (Epic) → Ice
 - **Diamond** (Legendary) → Light, Air
-- *(See `docs/csv/gemstones.csv` for complete mappings)*
+- _(See `docs/csv/gemstones.csv` for complete mappings)_
 
 ### Gemstone → Ritual Category Mappings
+
 Each gemstone powers 2-4 ritual types:
+
 - **Tanzanite** → Planar, Cosmic, Summoning
 - **Diamond** → Ascension, Circle, Reality, Resurrection
-- *(See `MAGIC_SYSTEM_DOCUMENTATION.md` for full details)*
+- _(See `MAGIC_SYSTEM_DOCUMENTATION.md` for full details)_
 
 ### School → Ritual Synergies
+
 Spells from specific schools amplify rituals:
+
 - **Fire School** → +20% power to Elemental & Sacrifice rituals
 - **Arcane School** → +15% stability to Planar & Temporal rituals
 
@@ -310,6 +337,7 @@ Spells from specific schools amplify rituals:
 ## ⚙️ Build & Testing
 
 ### Commands
+
 ```
 
 # Generate sources (mappings)
@@ -337,6 +365,7 @@ Spells from specific schools amplify rituals:
 ```
 
 ### Debugging
+
 - **In-Game Reload:** `/reload` command for data packs
 - **Logs:** Check `logs/latest.log` for errors
 - **Hot Reload:** Use IDE hot-swap for Java code changes
@@ -346,6 +375,7 @@ Spells from specific schools amplify rituals:
 ## 🤖 AI Agent Guidance
 
 ### Critical Rules
+
 1. ✅ **Always reference `docs/` for canonical data** (gemstones, schools, rituals)[file:18]
 2. ✅ **Maintain resource ID consistency** across all files (blockstates, models, textures, recipes)
 3. ✅ **Use templates:** Copy existing emerald/gemstone files as base for new content
@@ -353,11 +383,13 @@ Spells from specific schools amplify rituals:
 5. ✅ **Update documentation first:** Modify CSVs/JSONs in `docs/` before implementing code
 
 ### When Adding Content
+
 - **New Gemstone:** Update 7+ files (CSV, JSON, model, texture, recipe, tag, worldgen)
 - **New Spell:** Update 3+ files (spell JSON, Java class, translation)
 - **New Ritual:** Update 2+ files (ritual JSON, Java class)
 
 ### Code Generation Standards[file:10]
+
 ```
 
 /\*\*
@@ -403,4 +435,3 @@ throws InsufficientManaException {
 **Last Updated:** December 27, 2025
 **Maintained by:** Mosberg
 **License:** MIT
-```

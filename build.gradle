@@ -76,10 +76,20 @@ dependencies {
     // Compile-only annotations
     compileOnly "org.jetbrains:annotations:${project.annotations_version}"
 
-    // Testing (JUnit 6)
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${project.junit_version}"
-    testFixtures "org.junit.jupiter:junit-jupiter-params:${project.junit_version}"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${project.junit_version}"
+    // Testing Framework - JUnit Jupiter 6.0.1 (JUnit 6)
+    testImplementation platform("org.junit:junit-bom:${project.junit_version}")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "org.junit.jupiter:junit-jupiter-api"
+    testImplementation "org.junit.jupiter:junit-jupiter-params"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+
+    // Mocking Framework - Mockito 5.21.0
+    testImplementation "org.mockito:mockito-core:${project.mockito_version}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${project.mockito_version}"
+
+    // Assertion Library - AssertJ 3.27.6
+    testImplementation "org.assertj:assertj-core:${project.assertj_version}"
 }
 
 sourceSets {
@@ -89,6 +99,14 @@ sourceSets {
                 "src/main/generated/resources"
             ]
             exclude ".cache"
+        }
+    }
+    test {
+        java {
+            srcDirs = ["src/test/java"]
+        }
+        resources {
+            srcDirs = ["src/test/resources"]
         }
     }
 }
@@ -128,6 +146,7 @@ processResources {
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
     it.options.release = 21
+    it.options.compilerArgs += ["-Xlint:unchecked", "-Xlint:deprecation"]
 }
 
 java {
@@ -162,13 +181,74 @@ javadoc {
     options.addStringOption('Xdoclint:none', '-quiet')
 }
 
+// Enhanced test task configuration for JUnit 6
 test {
-    useJUnitPlatform()
-    testLogging {
-        events "passed", "skipped", "failed"
-        exceptionFormat = "full"
-        showStandardStreams = false
+    useJUnitPlatform {
+        // Include all test packages
+        includeTags 'fast', 'slow', 'integration'
+
+        // Enable parallel execution
+        systemProperty 'junit.jupiter.execution.parallel.enabled', 'true'
+        systemProperty 'junit.jupiter.execution.parallel.mode.default', 'concurrent'
+        systemProperty 'junit.jupiter.execution.parallel.mode.classes.default', 'concurrent'
     }
+
+    // Test performance configuration
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    forkEvery = 100
+
+    // JVM arguments for test execution
+    jvmArgs = [
+        '-Xmx2G',
+        '-XX:+UseG1GC',
+        '-XX:MaxGCPauseMillis=100'
+    ]
+
+    // Enhanced test logging
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat = "full"
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+        showStandardStreams = false
+
+        // Display test counts
+        afterSuite { desc, result ->
+            if (!desc.parent) {
+                println "\n${result.resultType} " +
+                    "(${result.testCount} tests, " +
+                    "${result.successfulTestCount} passed, " +
+                    "${result.failedTestCount} failed, " +
+                    "${result.skippedTestCount} skipped)"
+            }
+        }
+    }
+
+    // Fail fast on first test failure (optional - comment out if not desired)
+    // failFast = true
+
+    // Generate test reports
+    reports {
+        html.required = true
+        junitXml.required = true
+    }
+}
+
+// Task to run only fast tests
+tasks.register('fastTest', Test) {
+    useJUnitPlatform {
+        includeTags 'fast'
+    }
+    shouldRunAfter test
+}
+
+// Task to run integration tests
+tasks.register('integrationTest', Test) {
+    useJUnitPlatform {
+        includeTags 'integration'
+    }
+    shouldRunAfter test
 }
 
 // Publishing configuration
@@ -228,6 +308,9 @@ task projectInfo {
         println "Java Version:   ${JavaVersion.current()}"
         println "Gradle Version: ${gradle.gradleVersion}"
         println "Loom Version:   ${project.loom_version}"
+        println "JUnit:          ${project.junit_version}"
+        println "Mockito:        ${project.mockito_version}"
+        println "AssertJ:        ${project.assertj_version}"
         println "======================================"
     }
 }

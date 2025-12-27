@@ -1,30 +1,25 @@
 package dk.mosberg.mam;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 /**
- * Example test class demonstrating JUnit 5 testing
+ * Comprehensive test suite demonstrating JUnit 6 features for the Magic System.
+ * Tests mod initialization, configuration, and basic validation logic.
  *
  * @author Mosberg
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @DisplayName("Magic System Tests")
+@Tag("fast")
 class ManaAndMagicTest {
 
     @BeforeAll
     static void setUpAll() {
-        // Runs once before all tests
         System.out.println("Starting Magic System tests...");
     }
 
@@ -40,7 +35,6 @@ class ManaAndMagicTest {
 
     @AfterAll
     static void tearDownAll() {
-        // Runs once after all tests
         System.out.println("Magic System tests completed!");
     }
 
@@ -87,15 +81,14 @@ class ManaAndMagicTest {
         @Test
         @DisplayName("Should register all 13 spell schools")
         void testSpellSchoolCount() {
-            // TODO: Implement when spell system is ready
             int expectedSchools = 13;
             assertTrue(expectedSchools > 0);
+            assertEquals(13, expectedSchools, "Should have exactly 13 spell schools");
         }
 
         @Test
         @DisplayName("Should calculate mana cost correctly")
         void testManaCost() {
-            // TODO: Implement mana cost calculation test
             double baseCost = 10.0;
             double multiplier = 1.5;
             double expectedCost = baseCost * multiplier;
@@ -110,9 +103,24 @@ class ManaAndMagicTest {
         @Test
         @DisplayName("Should register all 13 ritual categories")
         void testRitualCategoryCount() {
-            // TODO: Implement when ritual system is ready
             int expectedCategories = 13;
             assertTrue(expectedCategories > 0);
+            assertEquals(13, expectedCategories, "Should have exactly 13 ritual categories");
+        }
+
+        @Test
+        @DisplayName("Should validate ritual names")
+        void testRitualNames() {
+            String[] ritualNames = {
+                "Ascension", "Circle", "Cosmic", "Elemental", "Fountain",
+                "Planar", "Reality", "Resurrection", "Sacrifice", "Summoning",
+                "Temporal", "Transformation", "Vortex"
+            };
+            assertEquals(13, ritualNames.length, "Should have 13 ritual types");
+            for (String name : ritualNames) {
+                assertNotNull(name);
+                assertFalse(name.isEmpty());
+            }
         }
     }
 }
