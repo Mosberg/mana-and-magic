@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "minecraft:deepslate_emerald_ore"
+              "name": "mam:deepslate_emerald_ore"
             },
             {
               "type": "minecraft:item",
@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:emerald"
+              "name": "mam:emerald"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/deepslate_emerald_ore"
+  "random_sequence": "mam:blocks/deepslate_emerald_ore"
 }

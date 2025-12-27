@@ -51,7 +51,7 @@ verify(mockPlayer, times(1)).consumeMana(20.0);
 - **Usage**: Readable, chainable assertions
 
 ```java
-assertThat(value)
+assertEquals(value)
     .isNotNull()
     .isGreaterThan(0)
     .isLessThan(100);
@@ -109,7 +109,7 @@ void testDamageCalculation() {
     double damage = spell.calculateDamage(powerLevel);
 
     // Assert
-    assertThat(damage)
+    assertEquals(damage)
         .isGreaterThan(0)
         .isEqualTo(12.0);
 }

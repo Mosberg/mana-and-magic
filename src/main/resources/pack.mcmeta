@@ -1,0 +1,20 @@
+{
+  "pack": {
+    "description": {
+      "text": "MAM - Mystical, Arcane & Magic",
+      "color": "aqua"
+    },
+    "supported_formats": [82, 82],
+    "min_format": [82, 0],
+    "max_format": [82, 0]
+  },
+  "data": {
+    "description": {
+      "text": "MAM - Mystical, Arcane & Magic Data",
+      "color": "light_purple"
+    },
+    "supported_formats": [88, 88],
+    "min_format": [88, 0],
+    "max_format": [88, 0]
+  }
+}

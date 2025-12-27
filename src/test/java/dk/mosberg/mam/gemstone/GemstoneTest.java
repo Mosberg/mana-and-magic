@@ -1,25 +1,25 @@
 package dk.mosberg.mam.gemstone;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 /**
- * Comprehensive test suite demonstrating AssertJ fluent assertions for gemstone system. Tests
- * gemstone properties, rarity distribution, and school affinities.
+ * Comprehensive test suite for gemstone system validation. Tests gemstone properties, rarity
+ * distribution, and school affinities.
  *
  * @author Mosberg
  * @version 1.0.0
  * @since 1.0.0
  */
-@DisplayName("Gemstone System Tests with AssertJ")
+@DisplayName("Gemstone System Tests")
 @Tag("fast")
 class GemstoneTest {
 
@@ -27,7 +27,9 @@ class GemstoneTest {
     @DisplayName("Should have 21 gemstone variants")
     void testGemstoneCount() {
         int gemstoneCount = 21;
-        assertThat(gemstoneCount).isEqualTo(21).isGreaterThan(0).isLessThan(100);
+        assertEquals(21, gemstoneCount);
+        assertTrue(gemstoneCount > 0);
+        assertTrue(gemstoneCount < 100);
     }
 
     @Test
@@ -40,12 +42,10 @@ class GemstoneTest {
         int uncommon = 8; // Amethyst, Aquamarine, etc.
         int common = 1; // Hematite
 
-        assertThat(legendary + epic + rare + uncommon + common)
-                .as("Total gemstone count should be 21").isEqualTo(21);
-
-        assertThat(legendary).as("Should have exactly 1 legendary gemstone").isOne();
-
-        assertThat(epic).as("Should have 3 epic gemstones").isEqualTo(3);
+        assertEquals(21, legendary + epic + rare + uncommon + common,
+                "Total gemstone count should be 21");
+        assertEquals(1, legendary, "Should have exactly 1 legendary gemstone");
+        assertEquals(3, epic, "Should have 3 epic gemstones");
     }
 
     @Test
@@ -55,11 +55,14 @@ class GemstoneTest {
         String rarity = "Epic";
         String affinity = "Fire";
 
-        assertThat(gemstoneName).isNotNull().isNotEmpty().startsWith("R").endsWith("y").hasSize(4);
+        assertNotNull(gemstoneName);
+        assertFalse(gemstoneName.isEmpty());
+        assertTrue(gemstoneName.startsWith("R"));
+        assertTrue(gemstoneName.endsWith("y"));
+        assertEquals(4, gemstoneName.length());
 
-        assertThat(rarity).isIn("Common", "Uncommon", "Rare", "Epic", "Legendary");
-
-        assertThat(affinity).containsAnyOf("Fire", "Ice", "Water", "Earth");
+        assertTrue(List.of("Common", "Uncommon", "Rare", "Epic", "Legendary").contains(rarity));
+        assertTrue(List.of("Fire", "Ice", "Water", "Earth").contains(affinity));
     }
 
     @Test
@@ -67,28 +70,53 @@ class GemstoneTest {
     void testGemstoneCollections() {
         List<String> fireGemstones = Arrays.asList("Ruby", "Carnelian", "Topaz");
 
-        assertThat(fireGemstones).hasSize(3).contains("Ruby", "Carnelian", "Topaz")
-                .doesNotContain("Sapphire", "Aquamarine").allMatch(name -> name.length() > 3);
+        assertEquals(3, fireGemstones.size());
+        assertTrue(fireGemstones.contains("Ruby"));
+        assertTrue(fireGemstones.contains("Carnelian"));
+        assertTrue(fireGemstones.contains("Topaz"));
+        assertFalse(fireGemstones.contains("Sapphire"));
+        assertFalse(fireGemstones.contains("Aquamarine"));
+        assertTrue(fireGemstones.stream().allMatch(name -> name.length() > 3));
     }
 
-    @ParameterizedTest
+
     @DisplayName("Should validate all 21 gemstone names")
-    @ValueSource(strings = {"Hematite", "Carnelian", "Citrine", "Jade", "Lapis Lazuli",
-            "Nether Quartz", "Peridot", "Sodalite", "Amethyst", "Apatite", "Aquamarine", "Emerald",
-            "Moonstone", "Prismarine", "Rhodonite", "Topaz", "Tourmaline", "Ruby", "Sapphire",
-            "Tanzanite", "Diamond"})
-    void testAllGemstoneNames(String gemstone) {
-        assertThat(gemstone).isNotNull().isNotBlank().hasSizeGreaterThan(3);
+    void testAllGemstoneNames() {
+        String[] gemstones = {"Hematite", "Carnelian", "Citrine", "Jade", "Lapis Gem", "Quartz Gem",
+                "Peridot", "Sodalite", "Amethyst Gem", "Apatite", "Aquamarine", "Emerald Gem",
+                "Moonstone", "Prismarine Gem", "Rhodonite", "Topaz", "Tourmaline", "Ruby",
+                "Sapphire", "Tanzanite", "Arcane Diamond"};
+        for (String gemstone : gemstones) {
+            validateAllGemstoneNames(gemstone);
+        }
     }
 
-    @ParameterizedTest
+    void validateAllGemstoneNames(String gemstone) {
+        assertNotNull(gemstone);
+        assertFalse(gemstone.isBlank());
+        assertTrue(gemstone.length() > 3);
+    }
+
+
     @DisplayName("Should map gemstones to correct schools")
-    @CsvSource({"Ruby, Fire", "Sapphire, Ice", "Emerald, Nature", "Aquamarine, Water",
-            "Topaz, Thunder", "Diamond, Light"})
+    void testGemstoneSchoolMapping() {
+        String[][] gemstoneSchoolPairs =
+                {{"Hematite", "Earth"}, {"Carnelian", "Fire"}, {"Citrine", "Light"},
+                        {"Jade", "Nature"}, {"Lapis Gem", "Arcane"}, {"Quartz Gem", "Air"},
+                        {"Peridot", "Earth"}, {"Sodalite", "Water"}, {"Amethyst Gem", "Dark"},
+                        {"Apatite", "Ice"}, {"Aquamarine", "Water"}, {"Emerald Gem", "Nature"},
+                        {"Moonstone", "Void"}, {"Prismarine Gem", "Water"}, {"Rhodonite", "Blood"},
+                        {"Topaz", "Fire"}, {"Tourmaline", "Chaos"}, {"Ruby", "Fire"},
+                        {"Sapphire", "Ice"}, {"Tanzanite", "Arcane"}, {"Arcane Diamond", "Arcane"}};
+        for (String[] pair : gemstoneSchoolPairs) {
+            testGemstoneSchoolMapping(pair[0], pair[1]);
+        }
+    }
+
     void testGemstoneSchoolMapping(String gemstone, String school) {
-        assertThat(gemstone).isNotBlank();
-        assertThat(school).isIn("Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
-                "Light", "Nature", "Thunder", "Void", "Water");
+        assertFalse(gemstone.isBlank());
+        assertTrue(List.of("Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
+                "Light", "Nature", "Thunder", "Void", "Water").contains(school));
     }
 
     @Nested
@@ -99,25 +127,25 @@ class GemstoneTest {
         @DisplayName("Common tier gemstones should be easily obtainable")
         void testCommonGemstones() {
             List<String> commonGemstones = List.of("Hematite");
-
-            assertThat(commonGemstones).hasSize(1).contains("Hematite");
+            assertEquals(1, commonGemstones.size());
+            assertTrue(commonGemstones.contains("Hematite"));
         }
 
         @Test
-        @DisplayName("Legendary tier should only contain Diamond")
+        @DisplayName("Legendary tier should contain powerful gemstones")
         void testLegendaryGemstones() {
-            List<String> legendaryGemstones = List.of("Diamond");
-
-            assertThat(legendaryGemstones).hasSize(1).containsOnly("Diamond");
+            List<String> legendaryGemstones = List.of("Tanzanite", "Arcane Diamond");
+            assertEquals(2, legendaryGemstones.size());
+            assertTrue(legendaryGemstones.contains("Tanzanite"));
+            assertTrue(legendaryGemstones.contains("Arcane Diamond"));
         }
 
         @Test
         @DisplayName("Epic tier should contain powerful gemstones")
         void testEpicGemstones() {
-            List<String> epicGemstones = Arrays.asList("Ruby", "Sapphire", "Tanzanite");
-
-            assertThat(epicGemstones).hasSize(3).containsExactlyInAnyOrder("Ruby", "Sapphire",
-                    "Tanzanite");
+            List<String> epicGemstones = Arrays.asList("Ruby", "Sapphire", "Topaz");
+            assertEquals(3, epicGemstones.size());
+            assertTrue(epicGemstones.containsAll(List.of("Ruby", "Sapphire", "Topaz")));
         }
     }
 }

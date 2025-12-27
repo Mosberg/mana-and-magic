@@ -76,20 +76,9 @@ dependencies {
     // Compile-only annotations
     compileOnly "org.jetbrains:annotations:${project.annotations_version}"
 
-    // Testing Framework - JUnit Jupiter 6.0.1 (JUnit 6)
-    testImplementation platform("org.junit:junit-bom:${project.junit_version}")
-    testImplementation "org.junit.jupiter:junit-jupiter"
-    testImplementation "org.junit.jupiter:junit-jupiter-api"
-    testImplementation "org.junit.jupiter:junit-jupiter-params"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
-    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
-
-    // Mocking Framework - Mockito 5.21.0
-    testImplementation "org.mockito:mockito-core:${project.mockito_version}"
-    testImplementation "org.mockito:mockito-junit-jupiter:${project.mockito_version}"
-
-    // Assertion Library - AssertJ 3.27.6
-    testImplementation "org.assertj:assertj-core:${project.assertj_version}"
+    // Testing Framework - JUnit Jupiter 6.0.1 (Minimal Setup)
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${project.junit_version}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${project.junit_version}"
 }
 
 sourceSets {
@@ -225,9 +214,6 @@ test {
         }
     }
 
-    // Fail fast on first test failure (optional - comment out if not desired)
-    // failFast = true
-
     // Generate test reports
     reports {
         html.required = true
@@ -309,8 +295,6 @@ task projectInfo {
         println "Gradle Version: ${gradle.gradleVersion}"
         println "Loom Version:   ${project.loom_version}"
         println "JUnit:          ${project.junit_version}"
-        println "Mockito:        ${project.mockito_version}"
-        println "AssertJ:        ${project.assertj_version}"
         println "======================================"
     }
 }

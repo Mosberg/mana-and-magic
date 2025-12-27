@@ -3,6 +3,8 @@ package dk.mosberg.mam;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import dk.mosberg.mam.registry.MamItemGroups;
+import dk.mosberg.mam.registry.MamItems;
 import net.fabricmc.api.ModInitializer;
 
 /**
@@ -32,12 +34,16 @@ public class ManaAndMagic implements ModInitializer {
         LOGGER.info("Initializing {} v1.0.0", MOD_NAME);
 
         // Register mod content in proper order
-        registerBlocks();
-        registerItems();
-        registerSpells();
-        registerRituals();
-        registerWorldGen();
-        registerNetworking();
+        MamBlocks();
+        MamItems();
+        MamSpells();
+        MamRituals();
+        MamWorldGens();
+        MamNetworkings();
+        MamItemGroups();
+
+        MamItems.register();
+        MamItemGroups.register();
 
         LOGGER.info("{} initialized successfully!", MOD_NAME);
     }
@@ -45,7 +51,7 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register all blocks (ores, gemstone blocks, ritual structures)
      */
-    private void registerBlocks() {
+    private void MamBlocks() {
         LOGGER.debug("Registering blocks...");
         // TODO: Implement block registration
         // Example: Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "gemstone_ore"),
@@ -55,7 +61,7 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register all items (gemstones, spell books, ritual items)
      */
-    private void registerItems() {
+    private void MamItems() {
         LOGGER.debug("Registering items...");
         // TODO: Implement item registration
         // Example: Registry.register(Registries.ITEM, new Identifier(MOD_ID, "ruby"), RUBY_ITEM);
@@ -64,7 +70,7 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register spell system and schools
      */
-    private void registerSpells() {
+    private void MamSpells() {
         LOGGER.debug("Registering spell system...");
         // TODO: Implement spell registration
         // Initialize spell schools: Air, Arcane, Blood, Chaos, Dark, Earth, Fire, Ice, Light,
@@ -74,7 +80,7 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register ritual system and categories
      */
-    private void registerRituals() {
+    private void MamRituals() {
         LOGGER.debug("Registering ritual system...");
         // TODO: Implement ritual registration
         // Initialize ritual categories: Ascension, Circle, Cosmic, Elemental, Fountain, Planar,
@@ -84,7 +90,7 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register world generation features (ore generation)
      */
-    private void registerWorldGen() {
+    private void MamWorldGens() {
         LOGGER.debug("Registering world generation...");
         // TODO: Implement worldgen registration
         // Register configured features and placed features for gemstone ores
@@ -93,10 +99,19 @@ public class ManaAndMagic implements ModInitializer {
     /**
      * Register networking for client-server synchronization
      */
-    private void registerNetworking() {
+    private void MamNetworkings() {
         LOGGER.debug("Registering networking...");
         // TODO: Implement packet registration
         // Register S2C and C2S packets for mana sync, spell casting, ritual activation
+    }
+
+    /**
+     * Register item groups (creative tabs)
+     */
+    private void MamItemGroups() {
+        LOGGER.debug("Registering item groups...");
+        // TODO: Implement item group registration
+        // Register creative tabs for mod items and blocks
     }
 
     /**

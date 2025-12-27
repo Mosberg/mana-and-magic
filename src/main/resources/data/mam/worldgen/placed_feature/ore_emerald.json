@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_emerald",
+  "feature": "mam:ore_emerald",
   "placement": [
     {
       "type": "minecraft:count",

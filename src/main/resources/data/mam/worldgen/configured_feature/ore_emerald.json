@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "minecraft:emerald_ore"
+          "Name": "mam:emerald_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "minecraft:deepslate_emerald_ore"
+          "Name": "mam:deepslate_emerald_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

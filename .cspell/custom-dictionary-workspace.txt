@@ -78,6 +78,7 @@ fabricmc
 ferritecore
 firstperson
 Flowable
+frametime
 Frostiful
 gamemode
 gametest

@@ -12,8 +12,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
 /**
  * Comprehensive test suite demonstrating JUnit 6 features for the Magic System. Tests mod
@@ -66,11 +64,17 @@ class ManaAndMagicTest {
         assertNotNull(ManaAndMagic.LOGGER);
     }
 
-    @ParameterizedTest
+
     @DisplayName("Should validate spell school names")
-    @ValueSource(strings = {"Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
-            "Light", "Nature", "Thunder", "Void", "Water"})
-    void testSpellSchoolNames(String schoolName) {
+    void testSpellSchoolNames() {
+        String[] spellSchools = {"Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
+                "Light", "Nature", "Thunder", "Void", "Water"};
+        for (String school : spellSchools) {
+            validateSpellSchoolName(school);
+        }
+    }
+
+    void validateSpellSchoolName(String schoolName) {
         assertNotNull(schoolName);
         assertFalse(schoolName.isEmpty());
         assertTrue(schoolName.length() > 2);
