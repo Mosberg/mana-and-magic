@@ -1,11 +1,1243 @@
 {
+  // ═════════════════════════════════════════════════════════════════════════
+  // Spell Checker Settings
+  // ═════════════════════════════════════════════════════════════════════════
   "cSpell.customDictionaries": {
     "custom-dictionary-workspace": {
       "name": "custom-dictionary-workspace",
       "path": "${workspaceFolder:mana-and-magic}/.cspell/custom-dictionary-workspace.txt",
       "addWords": true,
-      "scope": "workspace"
+      "scope": "workspace",
+      "description": "Custom dictionary for the Mana and Magic workspace"
     }
   },
-  "java.configuration.updateBuildConfiguration": "automatic"
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // Java Settings
+  // ═════════════════════════════════════════════════════════════════════════
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.format.settings.profile": "ManaAndMagic",
+  "java.import.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.import.maven.enabled": true,
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // 📦 MATERIAL ICON THEME - CONFIGURATION
+  // ═════════════════════════════════════════════════════════════════════════
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "material-icon-theme.opacity": 1,
+  "material-icon-theme.saturation": 1,
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // 📄 FILE ICON ASSOCIATIONS & CUSTOMIZATION
+  // ═════════════════════════════════════════════════════════════════════════
+  "material-icon-theme.files.associations": {
+    // Minecraft Files
+    "*.mcfunction": "config",
+    "*.accesswidener": "text",
+    "*.mixins.json": "jsonc",
+    "*.ogg": "audio",
+    "*.bbmodel": "json",
+
+    // Gradle Build System
+    "build.gradle": "gradle",
+    "build.gradle.kts": "gradle",
+    "settings.gradle": "gradle",
+    "settings.gradle.kts": "gradle",
+    "gradle.properties": "gradle",
+    "gradle-wrapper.properties": "gradle",
+    "gradlew": "console",
+    "gradlew.bat": "console",
+
+    // JSON Schema & Config Files
+    "**.schema.json": "json",
+    "**.schemas.json": "jsonschema-clone",
+
+    // Minecraft Data Files
+    "credits.json": "json",
+    "end.txt": "text",
+    "postcredits.txt": "text",
+    "splashes.txt": "text",
+    "sounds.json": "json-clone",
+    "atlases/*.json": "json",
+    "gpuwarnlist.json": "json",
+    "regionalcompliancies.json": "json",
+    "realms.json": "json"
+  },
+
+  "material-icon-theme.files.customClones": [
+    // Minecraft Functions
+    {
+      "name": "minecraft-function",
+      "base": "config",
+      "color": "purple-400",
+      "fileExtensions": ["mcfunction"]
+    },
+    // Gradle Build Files
+    {
+      "name": "gradle-build",
+      "base": "gradle",
+      "color": "green-600",
+      "fileNames": ["build.gradle", "build.gradle.kts"]
+    },
+    {
+      "name": "gradle-settings",
+      "base": "gradle",
+      "color": "blue-600",
+      "fileNames": ["settings.gradle", "settings.gradle.kts"]
+    },
+    // Blockbench Models
+    {
+      "name": "blockbench-model",
+      "base": "json",
+      "color": "orange-600",
+      "fileExtensions": ["bbmodel"]
+    },
+    // Minecraft Audio
+    {
+      "name": "minecraft-sound",
+      "base": "audio",
+      "color": "red-400",
+      "fileExtensions": ["ogg"]
+    },
+    // JSON Schemas
+    {
+      "name": "json-schema",
+      "base": "json",
+      "color": "purple-600",
+      "fileExtensions": ["schema.json"]
+    },
+    // Minecraft Sounds Configuration
+    {
+      "name": "minecraft-sounds-config",
+      "base": "json",
+      "color": "deep-orange-600",
+      "fileNames": ["sounds.json"]
+    }
+  ],
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // 📁 FOLDER ICON ASSOCIATIONS & CUSTOMIZATION
+  // ═════════════════════════════════════════════════════════════════════════
+  "material-icon-theme.folders.associations": {
+    // Minecraft Structure & Schema
+    "schema": "schema-green",
+    "schemas": "schemas-purple",
+
+    // Data Organization
+    "data": "data-folder",
+    "assets": "assets-folder",
+    "resourcepacks": "resourcepacks-folder",
+    "datapacks": "datapacks-folder",
+
+    // Entomology / Insect Mod Specific
+    "entomology": "entomology-folder",
+    "specimens": "specimen-folder",
+    "specimen": "specimen-folder",
+    "species": "species-folder",
+
+    // Minecraft Game Content
+    "advancement": "advancement-folder",
+    "advancements": "advancements-folder",
+    "blocks": "blocks-folder",
+    "items": "items-folder",
+    "recipe": "recipe-folder",
+    "recipes": "recipe-folder",
+    "loot_table": "loot-folder",
+    "loot_tables": "loot-folder",
+    "tags": "tags-folder",
+    "tag": "tags-folder",
+
+    // Textures & Models
+    "textures": "textures-folder",
+    "models": "models-folder",
+    "blockstates": "blockstates-folder",
+    "atlases": "atlases-folder",
+    "particles": "particle-folder",
+    "particle": "particle-folder",
+
+    // Audio & Localization
+    "sounds": "sounds-folder",
+    "sound": "sounds-folder",
+    "lang": "lang-folder",
+    "font": "font-folder",
+    "fonts": "font-folder",
+
+    // Code Organization
+    "mechanics": "mechanics-folder",
+    "research": "research-folder",
+    "advanced": "advanced-folder",
+    "registry": "registry-folder",
+    "impl": "impl-folder",
+
+    // Java/Object-Oriented Structure
+    "entity": "entity-folder",
+    "entities": "entities-folder",
+    "item": "item-folder",
+    "block": "block-folder",
+    "component": "component-folder",
+    "components": "component-folder",
+    "balance": "balance-folder",
+    "tooltip": "tooltip-folder",
+    "tooltips": "tooltip-folder",
+
+    // UI & Rendering
+    "keybind": "keybind-folder",
+    "keybinds": "keybind-folder",
+    "keybindings": "keybind-folder",
+    "hud": "hud-folder",
+    "overlay": "hud-folder",
+    "overlays": "hud-folder",
+    "gui": "gui-folder",
+    "container": "container-folder",
+
+    // Development & Build
+    "run": "run-folder",
+    "runs": "run-folder",
+    "mixin": "mixin-folder",
+    "mixins": "mixin-folder",
+    "render": "render-folder",
+    "renderer": "render-folder",
+
+    // Architecture
+    "client": "client-folder",
+    "server": "server-folder",
+    "common": "common-folder",
+    "util": "util-folder",
+    "utils": "util-folder",
+    "helper": "helper-folder",
+    "helpers": "helper-folder",
+    "config": "config-folder",
+    "configuration": "config-folder",
+
+    // Game UI Elements (Minecraft)
+    "hangingsigns": "signs-folder",
+    "presets": "presets-folder",
+    "realms": "realms-folder",
+    "sprites": "sprites-folder",
+    "title": "title-folder",
+    "background": "background-folder",
+    "panorama": "panorama-folder",
+    "dialog": "dialog-folder",
+    "gamemodeswitcher": "gamemode-folder",
+    "heart": "heart-folder",
+    "locatorbar": "locatorbar-folder",
+    "mouse": "mouse-folder",
+    "spectator": "spectator-folder",
+    "statistics": "statistics-folder",
+    "toast": "toast-folder",
+    "tutorial": "tutorial-folder",
+    "widget": "widget-folder",
+    "icon": "icon-folder",
+    "notification": "notification-folder",
+    "pendinginvite": "pendinginvite-folder",
+    "playerlist": "playerlist-folder",
+    "popup": "popup-folder",
+    "realmstatus": "realmstatus-folder",
+    "recipebook": "recipebook-folder",
+    "slot": "slot-folder",
+    "socialinteractions": "socialinteractions-folder",
+    "transferablelist": "transferablelist-folder",
+
+    // Container UI
+    "anvil": "anvil-folder",
+    "beacon": "beacon-folder",
+    "blastfurnace": "blastfurnace-folder",
+    "brewingstand": "brewingstand-folder",
+    "bundle": "bundle-folder",
+    "cartographytable": "cartographytable-folder",
+    "cartography_table": "cartographytable-folder",
+    "crafter": "crafter-folder",
+    "craftingtable": "craftingtable-folder",
+    "creativeinventory": "creativeinventory-folder",
+    "dispenser": "dispenser-folder",
+    "enchantingtable": "enchantingtable-folder",
+    "furnace": "furnace-folder",
+    "grindstone": "grindstone-folder",
+    "horse": "horse-folder",
+    "inventory": "inventory-folder",
+    "loom": "loom-folder",
+    "shulkerbox": "shulkerbox-folder",
+    "smithing": "smithing-folder",
+    "smoker": "smoker-folder",
+    "stonecutter": "stonecutter-folder",
+    "villager": "villager-folder",
+
+    // Minecraft Audio
+    "bossbar": "bossbar-folder",
+    "paintings": "paintings-folder",
+    "mob_effect": "mobeffect-folder",
+    "map": "map-folder",
+    "decorations": "decorations-folder",
+    "misc": "misc-folder",
+    "effect": "effect-folder",
+    "environment": "environment-folder",
+    "painting": "painting-folder",
+    "music": "music-folder",
+    "game": "game-folder",
+    "creative": "creative-folder",
+
+    // Minecraft Biomes
+    "end": "end-folder",
+    "nether": "nether-folder",
+    "crimson_forest": "crimsonforest-folder",
+    "nether_wastes": "netherwastes-folder",
+    "soul_sand_valley": "soulsandvalley-folder",
+    "swamp": "swamp-folder",
+    "water": "water-folder",
+
+    // Minecraft Sounds
+    "menu": "menu-folder",
+    "note": "note-folder",
+    "portal": "portal-folder",
+    "random": "random-folder",
+    "records": "records-folder",
+    "step": "step-folder",
+
+    // Minecraft Block Sounds
+    "cloth": "cloth-folder",
+    "coral": "coral-folder",
+    "grass": "grass-folder",
+    "gravel": "gravel-folder",
+    "ladder": "ladder-folder",
+    "sand": "sand-folder",
+    "scaffold": "scaffold-folder",
+    "snow": "snow-folder",
+    "stone": "stone-folder",
+    "wetgrass": "wetgrass-folder",
+    "wood": "wood-folder",
+
+    // Block Types
+    "tile": "tile-folder",
+    "piston": "piston-folder",
+
+    // UI & Misc
+    "ui": "ui-folder",
+    "credits": "credits-folder",
+    "texts": "texts-folder",
+    "minecraft": "minecraft-folder",
+    "mob": "mob-folder",
+    "ambient": "ambient-folder",
+    "cave": "cave-folder"
+  },
+
+  "material-icon-theme.folders.customClones": [
+    // ─── Color System: Material Design Palette ────────────────────────────
+
+    // Schema & Validation
+    {
+      "name": "schema-green",
+      "base": "folder",
+      "color": "green-600",
+      "lightColor": "grey-600",
+      "folderNames": ["schema"]
+    },
+    {
+      "name": "schemas-purple",
+      "base": "folder",
+      "color": "purple-600",
+      "lightColor": "grey-600",
+      "folderNames": ["schemas"]
+    },
+
+    // Core Data Organization
+    {
+      "name": "data-folder",
+      "base": "folder",
+      "color": "blue-600",
+      "folderNames": ["data"]
+    },
+    {
+      "name": "assets-folder",
+      "base": "folder-images",
+      "color": "purple-500",
+      "folderNames": ["assets"]
+    },
+    {
+      "name": "resourcepacks-folder",
+      "base": "folder-packages",
+      "color": "teal-600",
+      "folderNames": ["resourcepacks"]
+    },
+    {
+      "name": "datapacks-folder",
+      "base": "folder-database",
+      "color": "blue-700",
+      "folderNames": ["datapacks"]
+    },
+
+    // Entomology / Insect Mod
+    {
+      "name": "entomology-folder",
+      "base": "folder",
+      "color": "light-green-600",
+      "folderNames": ["entomology"]
+    },
+    {
+      "name": "specimen-folder",
+      "base": "folder",
+      "color": "teal-500",
+      "folderNames": ["specimen", "specimens"]
+    },
+    {
+      "name": "species-folder",
+      "base": "folder",
+      "color": "light-green-700",
+      "folderNames": ["species"]
+    },
+
+    // Minecraft Content
+    {
+      "name": "advancement-folder",
+      "base": "folder",
+      "color": "amber-500",
+      "folderNames": ["advancement"]
+    },
+    {
+      "name": "advancements-folder",
+      "base": "folder",
+      "color": "amber-600",
+      "folderNames": ["advancements"]
+    },
+    {
+      "name": "blocks-folder",
+      "base": "folder",
+      "color": "deep-orange-500",
+      "folderNames": ["blocks"]
+    },
+    {
+      "name": "items-folder",
+      "base": "folder",
+      "color": "cyan-600",
+      "folderNames": ["items"]
+    },
+    {
+      "name": "mechanics-folder",
+      "base": "folder",
+      "color": "indigo-500",
+      "folderNames": ["mechanics"]
+    },
+    {
+      "name": "recipe-folder",
+      "base": "folder",
+      "color": "red-400",
+      "folderNames": ["recipe", "recipes"]
+    },
+    {
+      "name": "research-folder",
+      "base": "folder",
+      "color": "purple-400",
+      "folderNames": ["research"]
+    },
+    {
+      "name": "advanced-folder",
+      "base": "folder",
+      "color": "pink-500",
+      "folderNames": ["advanced"]
+    },
+    {
+      "name": "registry-folder",
+      "base": "folder",
+      "color": "blue-gray-500",
+      "folderNames": ["registry"]
+    },
+    {
+      "name": "impl-folder",
+      "base": "folder",
+      "color": "deep-purple-500",
+      "folderNames": ["impl"]
+    },
+
+    // Object-Oriented Code
+    {
+      "name": "entity-folder",
+      "base": "folder",
+      "color": "blue-400",
+      "folderNames": ["entity"]
+    },
+    {
+      "name": "entities-folder",
+      "base": "folder",
+      "color": "blue-300",
+      "folderNames": ["entities"]
+    },
+    {
+      "name": "item-folder",
+      "base": "folder",
+      "color": "cyan-400",
+      "folderNames": ["item"]
+    },
+    {
+      "name": "block-folder",
+      "base": "folder",
+      "color": "orange-400",
+      "folderNames": ["block"]
+    },
+    {
+      "name": "component-folder",
+      "base": "folder",
+      "color": "green-500",
+      "folderNames": ["component", "components"]
+    },
+    {
+      "name": "balance-folder",
+      "base": "folder",
+      "color": "amber-600",
+      "folderNames": ["balance"]
+    },
+    {
+      "name": "tooltip-folder",
+      "base": "folder",
+      "color": "light-blue-400",
+      "folderNames": ["tooltip", "tooltips"]
+    },
+    {
+      "name": "particle-folder",
+      "base": "folder",
+      "color": "orange-A400",
+      "folderNames": ["particle", "particles"]
+    },
+
+    // UI & Input
+    {
+      "name": "keybind-folder",
+      "base": "folder",
+      "color": "yellow-700",
+      "folderNames": ["keybind", "keybinds", "keybindings"]
+    },
+    {
+      "name": "hud-folder",
+      "base": "folder",
+      "color": "cyan-A400",
+      "folderNames": ["hud", "overlay", "overlays"]
+    },
+
+    // Development
+    {
+      "name": "run-folder",
+      "base": "folder",
+      "color": "light-green-A700",
+      "folderNames": ["run", "runs"]
+    },
+    {
+      "name": "mixin-folder",
+      "base": "folder",
+      "color": "red-600",
+      "folderNames": ["mixin", "mixins"]
+    },
+    {
+      "name": "render-folder",
+      "base": "folder",
+      "color": "purple-500",
+      "folderNames": ["render", "renderer"]
+    },
+
+    // Architecture & Utilities
+    {
+      "name": "client-folder",
+      "base": "folder",
+      "color": "blue-500",
+      "folderNames": ["client"]
+    },
+    {
+      "name": "server-folder",
+      "base": "folder",
+      "color": "green-700",
+      "folderNames": ["server"]
+    },
+    {
+      "name": "common-folder",
+      "base": "folder",
+      "color": "grey-600",
+      "folderNames": ["common"]
+    },
+    {
+      "name": "util-folder",
+      "base": "folder",
+      "color": "yellow-600",
+      "folderNames": ["util", "utils"]
+    },
+    {
+      "name": "helper-folder",
+      "base": "folder",
+      "color": "teal-400",
+      "folderNames": ["helper", "helpers"]
+    },
+    {
+      "name": "config-folder",
+      "base": "folder",
+      "color": "orange-600",
+      "folderNames": ["config", "configuration"]
+    },
+
+    // Assets
+    {
+      "name": "textures-folder",
+      "base": "folder-images",
+      "color": "pink-400",
+      "folderNames": ["textures"]
+    },
+    {
+      "name": "models-folder",
+      "base": "folder",
+      "color": "deep-purple-400",
+      "folderNames": ["models"]
+    },
+    {
+      "name": "blockstates-folder",
+      "base": "folder",
+      "color": "brown-500",
+      "folderNames": ["blockstates"]
+    },
+    {
+      "name": "atlases-folder",
+      "base": "folder",
+      "color": "indigo-400",
+      "folderNames": ["atlases"]
+    },
+    {
+      "name": "font-folder",
+      "base": "folder",
+      "color": "deep-orange-400",
+      "folderNames": ["font", "fonts"]
+    },
+
+    // Localization
+    {
+      "name": "lang-folder",
+      "base": "folder",
+      "color": "blue-A200",
+      "folderNames": ["lang"]
+    },
+    {
+      "name": "sounds-folder",
+      "base": "folder-audio",
+      "color": "red-300",
+      "folderNames": ["sounds", "sound"]
+    },
+
+    // Loot & Tags
+    {
+      "name": "loot-folder",
+      "base": "folder",
+      "color": "amber-700",
+      "folderNames": ["loot_table", "loot_tables"]
+    },
+    {
+      "name": "tags-folder",
+      "base": "folder",
+      "color": "lime-600",
+      "folderNames": ["tags", "tag"]
+    },
+
+    // Minecraft UI Elements
+    {
+      "name": "gui-folder",
+      "base": "folder",
+      "color": "purple-300",
+      "folderNames": ["gui"]
+    },
+    {
+      "name": "container-folder",
+      "base": "folder",
+      "color": "brown-400",
+      "folderNames": ["container"]
+    },
+    {
+      "name": "signs-folder",
+      "base": "folder",
+      "color": "orange-300",
+      "folderNames": ["hangingsigns"]
+    },
+    {
+      "name": "presets-folder",
+      "base": "folder",
+      "color": "pink-300",
+      "folderNames": ["presets"]
+    },
+    {
+      "name": "realms-folder",
+      "base": "folder",
+      "color": "lime-700",
+      "folderNames": ["realms"]
+    },
+    {
+      "name": "sprites-folder",
+      "base": "folder-images",
+      "color": "teal-300",
+      "folderNames": ["sprites"]
+    },
+    {
+      "name": "title-folder",
+      "base": "folder",
+      "color": "indigo-300",
+      "folderNames": ["title"]
+    },
+    {
+      "name": "background-folder",
+      "base": "folder-images",
+      "color": "blue-grey-400",
+      "folderNames": ["background"]
+    },
+    {
+      "name": "panorama-folder",
+      "base": "folder-images",
+      "color": "light-blue-500",
+      "folderNames": ["panorama"]
+    },
+    {
+      "name": "dialog-folder",
+      "base": "folder",
+      "color": "amber-400",
+      "folderNames": ["dialog"]
+    },
+    {
+      "name": "gamemode-folder",
+      "base": "folder",
+      "color": "purple-600",
+      "folderNames": ["gamemodeswitcher"]
+    },
+    {
+      "name": "heart-folder",
+      "base": "folder",
+      "color": "red-500",
+      "folderNames": ["heart"]
+    },
+    {
+      "name": "locatorbar-folder",
+      "base": "folder",
+      "color": "cyan-500",
+      "folderNames": ["locatorbar"]
+    },
+    {
+      "name": "mouse-folder",
+      "base": "folder",
+      "color": "grey-500",
+      "folderNames": ["mouse"]
+    },
+    {
+      "name": "spectator-folder",
+      "base": "folder",
+      "color": "blue-grey-500",
+      "folderNames": ["spectator"]
+    },
+    {
+      "name": "statistics-folder",
+      "base": "folder",
+      "color": "green-600",
+      "folderNames": ["statistics"]
+    },
+    {
+      "name": "toast-folder",
+      "base": "folder",
+      "color": "orange-500",
+      "folderNames": ["toast"]
+    },
+    {
+      "name": "tutorial-folder",
+      "base": "folder",
+      "color": "light-green-500",
+      "folderNames": ["tutorial"]
+    },
+    {
+      "name": "widget-folder",
+      "base": "folder",
+      "color": "indigo-600",
+      "folderNames": ["widget"]
+    },
+    {
+      "name": "icon-folder",
+      "base": "folder-images",
+      "color": "yellow-600",
+      "folderNames": ["icon"]
+    },
+    {
+      "name": "notification-folder",
+      "base": "folder",
+      "color": "red-400",
+      "folderNames": ["notification"]
+    },
+    {
+      "name": "pendinginvite-folder",
+      "base": "folder",
+      "color": "pink-600",
+      "folderNames": ["pendinginvite"]
+    },
+    {
+      "name": "playerlist-folder",
+      "base": "folder",
+      "color": "cyan-600",
+      "folderNames": ["playerlist"]
+    },
+    {
+      "name": "popup-folder",
+      "base": "folder",
+      "color": "deep-purple-300",
+      "folderNames": ["popup"]
+    },
+    {
+      "name": "realmstatus-folder",
+      "base": "folder",
+      "color": "lime-500",
+      "folderNames": ["realmstatus"]
+    },
+    {
+      "name": "recipebook-folder",
+      "base": "folder",
+      "color": "brown-300",
+      "folderNames": ["recipebook"]
+    },
+    {
+      "name": "slot-folder",
+      "base": "folder",
+      "color": "grey-700",
+      "folderNames": ["slot"]
+    },
+    {
+      "name": "socialinteractions-folder",
+      "base": "folder",
+      "color": "teal-700",
+      "folderNames": ["socialinteractions"]
+    },
+    {
+      "name": "transferablelist-folder",
+      "base": "folder",
+      "color": "blue-400",
+      "folderNames": ["transferablelist"]
+    },
+
+    // Minecraft Containers
+    {
+      "name": "anvil-folder",
+      "base": "folder",
+      "color": "grey-600",
+      "folderNames": ["anvil"]
+    },
+    {
+      "name": "beacon-folder",
+      "base": "folder",
+      "color": "cyan-300",
+      "folderNames": ["beacon"]
+    },
+    {
+      "name": "blastfurnace-folder",
+      "base": "folder",
+      "color": "orange-700",
+      "folderNames": ["blastfurnace"]
+    },
+    {
+      "name": "brewingstand-folder",
+      "base": "folder",
+      "color": "purple-700",
+      "folderNames": ["brewingstand"]
+    },
+    {
+      "name": "bundle-folder",
+      "base": "folder",
+      "color": "brown-600",
+      "folderNames": ["bundle"]
+    },
+    {
+      "name": "cartographytable-folder",
+      "base": "folder",
+      "color": "blue-300",
+      "folderNames": ["cartographytable", "cartography_table"]
+    },
+    {
+      "name": "crafter-folder",
+      "base": "folder",
+      "color": "deep-orange-600",
+      "folderNames": ["crafter"]
+    },
+    {
+      "name": "craftingtable-folder",
+      "base": "folder",
+      "color": "brown-700",
+      "folderNames": ["craftingtable"]
+    },
+    {
+      "name": "creativeinventory-folder",
+      "base": "folder",
+      "color": "pink-700",
+      "folderNames": ["creativeinventory"]
+    },
+    {
+      "name": "dispenser-folder",
+      "base": "folder",
+      "color": "grey-500",
+      "folderNames": ["dispenser"]
+    },
+    {
+      "name": "enchantingtable-folder",
+      "base": "folder",
+      "color": "purple-500",
+      "folderNames": ["enchantingtable"]
+    },
+    {
+      "name": "furnace-folder",
+      "base": "folder",
+      "color": "orange-600",
+      "folderNames": ["furnace"]
+    },
+    {
+      "name": "grindstone-folder",
+      "base": "folder",
+      "color": "grey-700",
+      "folderNames": ["grindstone"]
+    },
+    {
+      "name": "horse-folder",
+      "base": "folder",
+      "color": "brown-400",
+      "folderNames": ["horse"]
+    },
+    {
+      "name": "inventory-folder",
+      "base": "folder",
+      "color": "blue-grey-600",
+      "folderNames": ["inventory"]
+    },
+    {
+      "name": "loom-folder",
+      "base": "folder",
+      "color": "red-300",
+      "folderNames": ["loom"]
+    },
+    {
+      "name": "shulkerbox-folder",
+      "base": "folder",
+      "color": "purple-600",
+      "folderNames": ["shulkerbox"]
+    },
+    {
+      "name": "smithing-folder",
+      "base": "folder",
+      "color": "cyan-700",
+      "folderNames": ["smithing"]
+    },
+    {
+      "name": "smoker-folder",
+      "base": "folder",
+      "color": "grey-800",
+      "folderNames": ["smoker"]
+    },
+    {
+      "name": "stonecutter-folder",
+      "base": "folder",
+      "color": "grey-600",
+      "folderNames": ["stonecutter"]
+    },
+    {
+      "name": "villager-folder",
+      "base": "folder",
+      "color": "green-500",
+      "folderNames": ["villager"]
+    },
+
+    // Minecraft Audio
+    {
+      "name": "bossbar-folder",
+      "base": "folder",
+      "color": "red-700",
+      "folderNames": ["bossbar"]
+    },
+    {
+      "name": "paintings-folder",
+      "base": "folder-images",
+      "color": "brown-300",
+      "folderNames": ["paintings", "painting"]
+    },
+    {
+      "name": "mobeffect-folder",
+      "base": "folder",
+      "color": "lime-400",
+      "folderNames": ["mob_effect"]
+    },
+    {
+      "name": "map-folder",
+      "base": "folder",
+      "color": "amber-600",
+      "folderNames": ["map"]
+    },
+    {
+      "name": "decorations-folder",
+      "base": "folder-images",
+      "color": "pink-300",
+      "folderNames": ["decorations"]
+    },
+    {
+      "name": "misc-folder",
+      "base": "folder",
+      "color": "grey-400",
+      "folderNames": ["misc"]
+    },
+    {
+      "name": "effect-folder",
+      "base": "folder",
+      "color": "light-green-400",
+      "folderNames": ["effect"]
+    },
+    {
+      "name": "environment-folder",
+      "base": "folder",
+      "color": "green-400",
+      "folderNames": ["environment"]
+    },
+    {
+      "name": "music-folder",
+      "base": "folder-audio",
+      "color": "deep-purple-300",
+      "folderNames": ["music"]
+    },
+    {
+      "name": "game-folder",
+      "base": "folder",
+      "color": "blue-600",
+      "folderNames": ["game"]
+    },
+    {
+      "name": "creative-folder",
+      "base": "folder",
+      "color": "pink-500",
+      "folderNames": ["creative"]
+    },
+
+    // Biomes
+    {
+      "name": "end-folder",
+      "base": "folder",
+      "color": "purple-900",
+      "folderNames": ["end"]
+    },
+    {
+      "name": "nether-folder",
+      "base": "folder",
+      "color": "red-800",
+      "folderNames": ["nether"]
+    },
+    {
+      "name": "crimsonforest-folder",
+      "base": "folder",
+      "color": "red-600",
+      "folderNames": ["crimson_forest"]
+    },
+    {
+      "name": "netherwastes-folder",
+      "base": "folder",
+      "color": "brown-700",
+      "folderNames": ["nether_wastes"]
+    },
+    {
+      "name": "soulsandvalley-folder",
+      "base": "folder",
+      "color": "cyan-800",
+      "folderNames": ["soul_sand_valley"]
+    },
+    {
+      "name": "swamp-folder",
+      "base": "folder",
+      "color": "green-800",
+      "folderNames": ["swamp"]
+    },
+    {
+      "name": "water-folder",
+      "base": "folder",
+      "color": "blue-500",
+      "folderNames": ["water"]
+    },
+
+    // Sound Categories
+    {
+      "name": "menu-folder",
+      "base": "folder-audio",
+      "color": "indigo-400",
+      "folderNames": ["menu"]
+    },
+    {
+      "name": "note-folder",
+      "base": "folder-audio",
+      "color": "amber-500",
+      "folderNames": ["note"]
+    },
+    {
+      "name": "portal-folder",
+      "base": "folder",
+      "color": "purple-700",
+      "folderNames": ["portal"]
+    },
+    {
+      "name": "random-folder",
+      "base": "folder",
+      "color": "grey-500",
+      "folderNames": ["random"]
+    },
+    {
+      "name": "records-folder",
+      "base": "folder-audio",
+      "color": "deep-purple-600",
+      "folderNames": ["records"]
+    },
+    {
+      "name": "step-folder",
+      "base": "folder-audio",
+      "color": "brown-500",
+      "folderNames": ["step"]
+    },
+
+    // Block Sounds
+    {
+      "name": "cloth-folder",
+      "base": "folder",
+      "color": "blue-grey-300",
+      "folderNames": ["cloth"]
+    },
+    {
+      "name": "coral-folder",
+      "base": "folder",
+      "color": "pink-400",
+      "folderNames": ["coral"]
+    },
+    {
+      "name": "grass-folder",
+      "base": "folder",
+      "color": "light-green-500",
+      "folderNames": ["grass"]
+    },
+    {
+      "name": "gravel-folder",
+      "base": "folder",
+      "color": "grey-600",
+      "folderNames": ["gravel"]
+    },
+    {
+      "name": "ladder-folder",
+      "base": "folder",
+      "color": "brown-400",
+      "folderNames": ["ladder"]
+    },
+    {
+      "name": "sand-folder",
+      "base": "folder",
+      "color": "yellow-300",
+      "folderNames": ["sand"]
+    },
+    {
+      "name": "scaffold-folder",
+      "base": "folder",
+      "color": "yellow-800",
+      "folderNames": ["scaffold"]
+    },
+    {
+      "name": "snow-folder",
+      "base": "folder",
+      "color": "blue-50",
+      "folderNames": ["snow"]
+    },
+    {
+      "name": "stone-folder",
+      "base": "folder",
+      "color": "grey-700",
+      "folderNames": ["stone"]
+    },
+    {
+      "name": "wetgrass-folder",
+      "base": "folder",
+      "color": "green-700",
+      "folderNames": ["wetgrass"]
+    },
+    {
+      "name": "wood-folder",
+      "base": "folder",
+      "color": "brown-600",
+      "folderNames": ["wood"]
+    },
+
+    // Tile & Blocks
+    {
+      "name": "tile-folder",
+      "base": "folder",
+      "color": "red-300",
+      "folderNames": ["tile"]
+    },
+    {
+      "name": "piston-folder",
+      "base": "folder",
+      "color": "amber-700",
+      "folderNames": ["piston"]
+    },
+    {
+      "name": "ui-folder",
+      "base": "folder",
+      "color": "cyan-500",
+      "folderNames": ["ui"]
+    },
+    {
+      "name": "credits-folder",
+      "base": "folder",
+      "color": "yellow-500",
+      "folderNames": ["credits"]
+    },
+    {
+      "name": "texts-folder",
+      "base": "folder",
+      "color": "blue-grey-400",
+      "folderNames": ["texts"]
+    },
+    {
+      "name": "minecraft-folder",
+      "base": "folder",
+      "color": "green-600",
+      "folderNames": ["minecraft"]
+    },
+    {
+      "name": "mob-folder",
+      "base": "folder",
+      "color": "red-500",
+      "folderNames": ["mob"]
+    },
+    {
+      "name": "ambient-folder",
+      "base": "folder-audio",
+      "color": "blue-300",
+      "folderNames": ["ambient"]
+    },
+    {
+      "name": "cave-folder",
+      "base": "folder",
+      "color": "grey-800",
+      "folderNames": ["cave"]
+    },
+    {
+      "name": "gpu-folder",
+      "base": "folder",
+      "color": "cyan-700",
+      "folderNames": ["gpu_warnlist"]
+    }
+  ],
+
+  // ═════════════════════════════════════════════════════════════════════════
+  // 🌐 LANGUAGE ICON ASSOCIATIONS
+  // ═════════════════════════════════════════════════════════════════════════
+  "material-icon-theme.languages.associations": {
+    "json": "json"
+  },
+
+  "material-icon-theme.languages.customClones": [
+    {
+      "name": "json-clone",
+      "base": "json",
+      "color": "green-600",
+      "lightColor": "grey-600",
+      "ids": ["json-clone"]
+    },
+    {
+      "name": "jsonschema-clone",
+      "base": "json",
+      "color": "purple-600",
+      "lightColor": "grey-600",
+      "ids": ["jsonschema-clone"]
+    }
+  ]
 }
