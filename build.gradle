@@ -170,17 +170,9 @@ javadoc {
     options.addStringOption('Xdoclint:none', '-quiet')
 }
 
-// Enhanced test task configuration for JUnit 6
+// Minimal test configuration for JUnit 6
 test {
-    useJUnitPlatform {
-        // Include all test packages
-        includeTags 'fast', 'slow', 'integration'
-
-        // Enable parallel execution
-        systemProperty 'junit.jupiter.execution.parallel.enabled', 'true'
-        systemProperty 'junit.jupiter.execution.parallel.mode.default', 'concurrent'
-        systemProperty 'junit.jupiter.execution.parallel.mode.classes.default', 'concurrent'
-    }
+    useJUnitPlatform()
 
     // Test performance configuration
     maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
@@ -193,23 +185,26 @@ test {
         '-XX:MaxGCPauseMillis=100'
     ]
 
-    // Enhanced test logging
+    // Test logging
     testLogging {
-        events "passed", "skipped", "failed", "standardOut", "standardError"
+        events "passed", "skipped", "failed"
         exceptionFormat = "full"
         showExceptions = true
         showCauses = true
         showStackTraces = true
         showStandardStreams = false
 
-        // Display test counts
+        // Display test summary
         afterSuite { desc, result ->
             if (!desc.parent) {
-                println "\n${result.resultType} " +
-                    "(${result.testCount} tests, " +
-                    "${result.successfulTestCount} passed, " +
-                    "${result.failedTestCount} failed, " +
-                    "${result.skippedTestCount} skipped)"
+                println "\n" + "=".repeat(50)
+                println "Test Results: ${result.resultType}"
+                println "=".repeat(50)
+                println "Total:   ${result.testCount} tests"
+                println "Passed:  ${result.successfulTestCount}"
+                println "Failed:  ${result.failedTestCount}"
+                println "Skipped: ${result.skippedTestCount}"
+                println "=".repeat(50) + "\n"
             }
         }
     }
@@ -219,22 +214,6 @@ test {
         html.required = true
         junitXml.required = true
     }
-}
-
-// Task to run only fast tests
-tasks.register('fastTest', Test) {
-    useJUnitPlatform {
-        includeTags 'fast'
-    }
-    shouldRunAfter test
-}
-
-// Task to run integration tests
-tasks.register('integrationTest', Test) {
-    useJUnitPlatform {
-        includeTags 'integration'
-    }
-    shouldRunAfter test
 }
 
 // Publishing configuration
@@ -283,9 +262,9 @@ clean {
 // Task to display project info
 task projectInfo {
     doLast {
-        println "======================================"
-        println "Arcane Magic System - Mana and Magic"
-        println "======================================"
+        println "=" * 60
+        println "  Arcane Magic System - Mana and Magic"
+        println "=" * 60
         println "Mod Name:       ${project.mod_name}"
         println "Version:        ${project.version}"
         println "Minecraft:      ${project.minecraft_version}"
@@ -294,7 +273,7 @@ task projectInfo {
         println "Java Version:   ${JavaVersion.current()}"
         println "Gradle Version: ${gradle.gradleVersion}"
         println "Loom Version:   ${project.loom_version}"
-        println "JUnit:          ${project.junit_version}"
-        println "======================================"
+        println "JUnit Version:  ${project.junit_version}"
+        println "=" * 60
     }
 }

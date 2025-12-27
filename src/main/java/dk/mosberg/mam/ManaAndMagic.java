@@ -3,6 +3,8 @@ package dk.mosberg.mam;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import dk.mosberg.mam.registry.MamBlockLoot;
+import dk.mosberg.mam.registry.MamBlocks;
 import dk.mosberg.mam.registry.MamItemGroups;
 import dk.mosberg.mam.registry.MamItems;
 import net.fabricmc.api.ModInitializer;
@@ -34,7 +36,8 @@ public class ManaAndMagic implements ModInitializer {
         LOGGER.info("Initializing {} v1.0.0", MOD_NAME);
 
         // Register mod content in proper order
-        // MamBlocks.register();
+        MamBlocks.register();
+        MamBlockLoot.register();
         MamItems.register();
         // MamSpells.register();
         // MamRituals.register();
