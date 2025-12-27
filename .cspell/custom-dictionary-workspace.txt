@@ -53,6 +53,7 @@ DEEPSLATE
 defence
 despawn
 Despawn
+devmode
 Dfabric
 dists
 Dlog
@@ -73,6 +74,7 @@ Eventbus
 examplemod
 fabricloader
 fabricmc
+ferritecore
 firstperson
 Flowable
 Frostiful
@@ -88,6 +90,8 @@ GLSL
 gradlew
 grimoires
 gson
+hamcrest
+Hamcrest
 Healthindicatortxf
 Heightmap
 HEXCODE
@@ -97,8 +101,11 @@ ient
 intarget
 intdiv
 Ints
+isxander
+Isxander
 itemgroup
 itemstack
+jamieswhiteshirt
 JAVACMD
 jvmargs
 katana
@@ -258,6 +265,8 @@ WTHIT
 Wyrm
 Xdoclint
 Xlint
+yacl
+YACL
 Yarn
 yarnmappings
 Youll

@@ -1,12 +1,19 @@
 pluginManagement {
-	repositories {
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		mavenCentral()
-		gradlePluginPortal()
-	}
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
 }
 
-rootProject.name = "mana-and-magic"
+rootProject.name = 'mana-and-magic'
+
+// Build cache configuration (Gradle 9.2+)
+buildCache {
+    local {
+        enabled = true
+        directory = new File(rootDir, 'build-cache')
+    }
+}

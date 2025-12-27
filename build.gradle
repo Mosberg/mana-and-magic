@@ -14,6 +14,10 @@ base {
 repositories {
     mavenCentral()
     maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+    maven {
         name = "Terraformers"
         url = "https://maven.terraformersmc.com/releases/"
     }
@@ -21,45 +25,32 @@ repositories {
         name = "Shedaniel"
         url = "https://maven.shedaniel.me/"
     }
-    maven {
-        name = "CurseMaven"
-        url = "https://cursemaven.com/"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
 }
 
 loom {
     splitEnvironmentSourceSets()
 
     mods {
-        mosbergapi {
+        mam {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
     }
 
     runs {
-        // Enhanced client run configuration
         client {
-            client()
             configName = "Minecraft Client"
-            ideConfigGenerated = true
             runDir = "run"
         }
 
-        // Enhanced server run configuration
         server {
-            server()
             configName = "Minecraft Server"
-            ideConfigGenerated = true
             runDir = "run-server"
         }
     }
 }
 
-// Configure data generation - this automatically creates the 'datagen' run config
+// Configure data generation
 fabricApi {
     configureDataGeneration {
         client = true
@@ -87,8 +78,8 @@ dependencies {
 
     // Testing (JUnit 6)
     testImplementation "org.junit.jupiter:junit-jupiter-api:${project.junit_version}"
+    testFixtures "org.junit.jupiter:junit-jupiter-params:${project.junit_version}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${project.junit_version}"
-    testRuntimeOnly "org.junit.platform:junit-platform-launcher:${project.junit_version}"
 }
 
 sourceSets {
@@ -175,7 +166,7 @@ test {
     useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
-        exceptionFormat = "full"  // ✅ Gradle 9+ compatible
+        exceptionFormat = "full"
         showStandardStreams = false
     }
 }
@@ -213,18 +204,8 @@ publishing {
     }
 
     repositories {
-        // Example: Local maven repository
+        // Uncomment to publish to local Maven repository
         // mavenLocal()
-
-        // Example: Custom maven repository
-        // maven {
-        //     name = "MyMaven"
-        //     url = "https://maven.example.com/releases"
-        //     credentials {
-        //         username = project.findProperty("maven.username") ?: System.getenv("MAVEN_USERNAME")
-        //         password = project.findProperty("maven.password") ?: System.getenv("MAVEN_PASSWORD")
-        //     }
-        // }
     }
 }
 
@@ -237,7 +218,7 @@ clean {
 task projectInfo {
     doLast {
         println "======================================"
-        println "Arcane Magic System - Mana and Magic Build Information"
+        println "Arcane Magic System - Mana and Magic"
         println "======================================"
         println "Mod Name:       ${project.mod_name}"
         println "Version:        ${project.version}"
@@ -246,6 +227,7 @@ task projectInfo {
         println "Fabric API:     ${project.fabric_version}"
         println "Java Version:   ${JavaVersion.current()}"
         println "Gradle Version: ${gradle.gradleVersion}"
+        println "Loom Version:   ${project.loom_version}"
         println "======================================"
     }
 }

@@ -23,8 +23,21 @@
     "minecraft": "${minecraft_version}",
     "java": ">=21"
   },
+  "recommends": {
+    "modmenu": "*",
+    "cloth-config": "*"
+  },
   "suggests": {
-    "cloth-config": "*",
-    "modmenu": "*"
+    "rei": "*",
+    "trinkets": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": ["library"],
+      "links": {
+        "modmenu.discord": "https://discord.gg/your-invite",
+        "modmenu.wiki": "${mod_homepage}/wiki"
+      }
+    }
   }
 }

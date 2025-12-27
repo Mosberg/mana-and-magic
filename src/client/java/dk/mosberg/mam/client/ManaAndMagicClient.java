@@ -12,6 +12,9 @@ import net.fabricmc.api.ClientModInitializer;
  * @version 1.0.0
  */
 public class ManaAndMagicClient implements ClientModInitializer {
+    /**
+     * Client-specific logger
+     */
     public static final Logger LOGGER = LoggerFactory.getLogger("MAM-Client");
 
     @Override
@@ -23,6 +26,7 @@ public class ManaAndMagicClient implements ClientModInitializer {
         registerScreens();
         registerKeyBindings();
         registerParticles();
+        registerNetworkHandlers();
 
         LOGGER.info("Arcane Magic System client initialized!");
     }
@@ -33,6 +37,8 @@ public class ManaAndMagicClient implements ClientModInitializer {
     private void registerRenderers() {
         LOGGER.debug("Registering renderers...");
         // TODO: Implement renderer registration
+        // Example: BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GEMSTONE_ORE,
+        // RenderLayer.getCutout());
     }
 
     /**
@@ -41,6 +47,8 @@ public class ManaAndMagicClient implements ClientModInitializer {
     private void registerScreens() {
         LOGGER.debug("Registering screens...");
         // TODO: Implement screen registration
+        // Example: HandledScreens.register(ModScreenHandlers.SPELL_BOOK, SpellBookScreen::new);
+        // Register HUD overlays for mana bar display
     }
 
     /**
@@ -49,6 +57,8 @@ public class ManaAndMagicClient implements ClientModInitializer {
     private void registerKeyBindings() {
         LOGGER.debug("Registering keybindings...");
         // TODO: Implement keybinding registration
+        // Example: KeyBindingHelper.registerKeyBinding(CAST_SPELL_KEY);
+        // Keybinds: Cast spell, Open spell book, Next/Previous spell, Open ritual menu
     }
 
     /**
@@ -57,5 +67,17 @@ public class ManaAndMagicClient implements ClientModInitializer {
     private void registerParticles() {
         LOGGER.debug("Registering particles...");
         // TODO: Implement particle registration
+        // Example: ParticleFactoryRegistry.getInstance().register(ModParticles.MAGIC_SPARKLE,
+        // MagicSparkleParticle.Factory::new);
+        // Particles for each spell school: Fire, Ice, Lightning, etc.
+    }
+
+    /**
+     * Register client-side network packet handlers
+     */
+    private void registerNetworkHandlers() {
+        LOGGER.debug("Registering network handlers...");
+        // TODO: Implement network handler registration
+        // Handle S2C packets: Mana updates, Spell effects, Ritual notifications
     }
 }
