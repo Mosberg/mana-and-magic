@@ -21,13 +21,20 @@ repositories {
         name = "Shedaniel"
         url = "https://maven.shedaniel.me/"
     }
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com/"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 loom {
     splitEnvironmentSourceSets()
 
     mods {
-        mam {
+        mosbergapi {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
@@ -55,8 +62,7 @@ loom {
 // Configure data generation - this automatically creates the 'datagen' run config
 fabricApi {
     configureDataGeneration {
-        client = false
-        server = false
+        client = true
     }
 }
 
@@ -154,7 +160,7 @@ jar {
             "Implementation-Title": project.mod_name,
             "Implementation-Version": project.version,
             "Implementation-Vendor": project.mod_author,
-            "Implementation-Timestamp": new Date().format("dd-MM-yyyy'T'HH:mm:ssZ")
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }

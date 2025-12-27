@@ -7,3 +7,58 @@
 # These are Windows script files and should use crlf
 *.bat           text eol=crlf
 
+# Auto-detect text files and perform LF normalization
+* text=auto
+
+# Java sources
+*.java text diff=java
+*.gradle text diff=java
+*.groovy text diff=groovy
+
+# JSON files
+*.json text
+*.json5 text
+
+# Config files
+*.properties text
+*.yml text
+*.yaml text
+*.toml text
+*.xml text
+
+# Shell scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Documentation
+*.md text diff=markdown
+*.txt text
+*.adoc text
+*.tex text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.eps binary
+*.ai binary
+
+# Audio
+*.ogg binary
+*.mp3 binary
+*.wav binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.jar binary
+
+# Gradle wrapper
+gradlew text eol=lf
+gradlew.bat text eol=crlf
