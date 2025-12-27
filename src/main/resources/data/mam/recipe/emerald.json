@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": ["mam:emerald_block"],
-  "result": {
-    "count": 9,
-    "id": "mam:emerald"
-  }
-}
