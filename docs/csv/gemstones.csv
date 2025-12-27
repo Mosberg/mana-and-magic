@@ -1,18 +1,12 @@
 ID,Name,Color,Hex,Shape,Rarity,Affinity,Schools,Rituals,Image
-amethyst_shard,Amethyst Shard,Purple,#9966CC,crystal,uncommon,arcane,arcane,"temporal, planar",amethyst_shard.png
 apatite,Apatite,Cyan Blue,#2DD4DB,round,rare,water,"water, ice","vortex, fountain",apatite.png
 aquamarine,Aquamarine,Light Blue,#7DD3E8,diamond,rare,water,"water, ice",fountain,aquamarine.png
 carnelian,Carnelian,Orange Red,#E86938,round,uncommon,fire,"fire, blood",sacrifice,carnelian.png
 citrine,Citrine,Golden Yellow,#F4B942,octagon,uncommon,light,"light, thunder","ascension, resurrection",citrine.png
-diamond,Diamond,Cyan White,#5DCFCF,octagon,legendary,durability,"light, air","ascension, circle, reality, resurrection",diamond.png
-emerald,Emerald,Vibrant Green,#50C878,octagon,rare,nature,nature,elemental,emerald.png
 hematite,Hematite,Metallic Gray,#5A5A5A,round,common,earth,"earth, dark, void","sacrifice, summoning",hematite.png
 jade,Jade,Medium Green,#5FA777,round,uncommon,nature,"nature, earth",transformation,jade.png
-lapis_lazuli,Lapis Lazuli,Deep Blue,#1E488F,round,uncommon,enchantment,arcane,fountain,lapis_lazuli.png
 moonstone,Moonstone,Pearly White,#E8E5E0,oval,rare,lunar,air,"circle, cosmic, temporal",moonstone.png
-nether_quartz,Nether Quartz,Cream White,#E4D4C8,crystal,uncommon,nether,,"reality, temporal",nether_quartz.png
 peridot,Peridot,Lime Green,#A4D65E,round,uncommon,nature,"nature, earth",transformation,peridot.png
-prismarine_shard,Prismarine Shard,Aqua Teal,#5AB5A5,crystal,rare,ocean,water,fountain,prismarine_shard.png
 rhodonite,Rhodonite,Rose Pink,#D66B88,round,rare,healing,chaos,resurrection,rhodonite.png
 ruby,Ruby,Deep Red,#E63946,round,epic,fire,"fire, blood","elemental, sacrifice",ruby.png
 sapphire,Sapphire,Deep Blue,#2952A3,round,epic,ice,ice,"elemental, cosmic",sapphire.png

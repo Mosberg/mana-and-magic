@@ -1,14 +1,14 @@
 ID,Name,Symbol,Color,Hex,Focus,Gemstones,Description
-air,Air,🌀,Light Gray,#C0C0C0,Mobility & Speed,"moonstone, diamond",Harness wind and weather to enhance mobility and deliver swift attacks.
-arcane,Arcane,🔮,Purple,#9966CC,Utility & Manipulation,"amethyst_shard, tanzanite, lapis_lazuli",Master raw magical energy for utility spells and arcane manipulation.
+air,Air,🌀,Light Gray,#C0C0C0,Mobility & Speed,"moonstone",Harness wind and weather to enhance mobility and deliver swift attacks.
+arcane,Arcane,🔮,Purple,#9966CC,Utility & Manipulation,"tanzanite",Master raw magical energy for utility spells and arcane manipulation.
 blood,Blood,🩸,Dark Red,#8B0000,Sacrifice for Power,"ruby, carnelian",Exchange life force for devastating power through blood magic rituals.
 chaos,Chaos,🌪️,Magenta,#FF00FF,Unpredictable Effects,"tourmaline, rhodonite",Wield chaotic energies that produce random and devastating effects.
 dark,Dark,🌑,Dark Purple,#2D1B4E,DOT & Curses,"sodalite, hematite",Channel shadow magic to curse enemies and inflict damage over time.
 earth,Earth,🌍,Brown,#8B4513,Defense & Stability,"hematite, jade, peridot",Command stone and earth for defensive barriers and stability.
 fire,Fire,🔥,Orange,#FF4500,Damage & Destruction,"ruby, carnelian, topaz",Unleash devastating flames to incinerate enemies and break obstacles.
 ice,Ice,❄️,Cyan,#00FFFF,Control & Freezing,"sapphire, aquamarine, apatite",Freeze enemies solid and control the battlefield with ice magic.
-light,Light,✨,Pale Yellow,#FFF8DC,Holy Power & Protection,"citrine, topaz, diamond","Channel holy radiance for healing, protection, and smiting evil."
-nature,Nature,🌿,Green,#228B22,Growth & Life,"emerald, jade, peridot","Draw upon natural forces for growth, healing, and life magic."
+light,Light,✨,Pale Yellow,#FFF8DC,Holy Power & Protection,"citrine, topaz","Channel holy radiance for healing, protection, and smiting evil."
+nature,Nature,🌿,Green,#228B22,Growth & Life,"jade, peridot","Draw upon natural forces for growth, healing, and life magic."
 thunder,Thunder,⚡,Yellow,#FFD700,Burst Damage & Energy,"citrine, topaz",Strike with devastating lightning for explosive burst damage.
 void,Void,🕳️,Black,#000000,Dimensional Magic,"tanzanite, hematite",Tap into the void between dimensions for reality-bending effects.
-water,Water,💧,Blue,#1E90FF,Healing & Purification,"apatite, aquamarine, prismarine_shard","Control water for healing, purification, and aquatic mastery."
+water,Water,💧,Blue,#1E90FF,Healing & Purification,"apatite, aquamarine","Control water for healing, purification, and aquatic mastery."

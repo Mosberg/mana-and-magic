@@ -44,23 +44,17 @@ public final class MamItemGroups {
                         entries.add(MamItems.CARNELIAN);
                         entries.add(MamItems.CITRINE);
                         entries.add(MamItems.JADE);
-                        entries.add(MamItems.LAPIS_GEM); // Updated
-                        entries.add(MamItems.QUARTZ_GEM); // Updated
                         entries.add(MamItems.PERIDOT);
                         entries.add(MamItems.SODALITE);
-                        entries.add(MamItems.AMETHYST_GEM); // Updated
                         entries.add(MamItems.APATITE);
                         entries.add(MamItems.AQUAMARINE);
-                        entries.add(MamItems.EMERALD_GEM);
                         entries.add(MamItems.MOONSTONE);
-                        entries.add(MamItems.PRISMARINE_GEM); // Updated
                         entries.add(MamItems.RHODONITE);
                         entries.add(MamItems.TOURMALINE);
                         entries.add(MamItems.TOPAZ);
                         entries.add(MamItems.RUBY);
                         entries.add(MamItems.SAPPHIRE);
                         entries.add(MamItems.TANZANITE);
-                        entries.add(MamItems.ARCANE_DIAMOND); // Updated
                     }).build();
 
     private MamItemGroups() {
@@ -97,23 +91,17 @@ public final class MamItemGroups {
             entries.add(MamItems.CARNELIAN);
             entries.add(MamItems.CITRINE);
             entries.add(MamItems.JADE);
-            entries.add(MamItems.LAPIS_GEM);
-            entries.add(MamItems.QUARTZ_GEM);
             entries.add(MamItems.PERIDOT);
             entries.add(MamItems.SODALITE);
-            entries.add(MamItems.AMETHYST_GEM);
             entries.add(MamItems.APATITE);
             entries.add(MamItems.AQUAMARINE);
-            entries.add(MamItems.EMERALD_GEM);
             entries.add(MamItems.MOONSTONE);
-            entries.add(MamItems.PRISMARINE_GEM);
             entries.add(MamItems.RHODONITE);
             entries.add(MamItems.TOURMALINE);
             entries.add(MamItems.TOPAZ);
             entries.add(MamItems.RUBY);
             entries.add(MamItems.SAPPHIRE);
             entries.add(MamItems.TANZANITE);
-            entries.add(MamItems.ARCANE_DIAMOND);
         });
     }
 }

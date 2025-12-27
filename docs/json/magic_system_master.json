@@ -10,7 +10,7 @@
         "color": "Light Gray",
         "hex": "#C0C0C0",
         "focus": "Mobility & Speed",
-        "gemstones": ["moonstone", "diamond"],
+        "gemstones": ["moonstone"],
         "description": "Harness wind and weather to enhance mobility and deliver swift attacks."
       },
       {
@@ -20,7 +20,7 @@
         "color": "Purple",
         "hex": "#9966CC",
         "focus": "Utility & Manipulation",
-        "gemstones": ["amethyst_shard", "tanzanite", "lapis_lazuli"],
+        "gemstones": ["tanzanite"],
         "description": "Master raw magical energy for utility spells and arcane manipulation."
       },
       {
@@ -90,7 +90,7 @@
         "color": "Pale Yellow",
         "hex": "#FFF8DC",
         "focus": "Holy Power & Protection",
-        "gemstones": ["citrine", "topaz", "diamond"],
+        "gemstones": ["citrine", "topaz"],
         "description": "Channel holy radiance for healing, protection, and smiting evil."
       },
       {
@@ -100,7 +100,7 @@
         "color": "Green",
         "hex": "#228B22",
         "focus": "Growth & Life",
-        "gemstones": ["emerald", "jade", "peridot"],
+        "gemstones": ["jade", "peridot"],
         "description": "Draw upon natural forces for growth, healing, and life magic."
       },
       {
@@ -130,7 +130,7 @@
         "color": "Blue",
         "hex": "#1E90FF",
         "focus": "Healing & Purification",
-        "gemstones": ["apatite", "aquamarine", "prismarine_shard"],
+        "gemstones": ["apatite", "aquamarine"],
         "description": "Control water for healing, purification, and aquatic mastery."
       }
     ],
@@ -142,7 +142,7 @@
         "color": "Gold",
         "hex": "#FFD700",
         "focus": "Transcendence & Empowerment",
-        "gemstones": ["diamond", "citrine", "topaz"],
+        "gemstones": ["citrine", "topaz"],
         "description": "Ascend beyond mortal limits to achieve divine power temporarily."
       },
       {
@@ -152,7 +152,7 @@
         "color": "White",
         "hex": "#FFFFFF",
         "focus": "Bounded Magic & Protection",
-        "gemstones": ["moonstone", "diamond"],
+        "gemstones": ["moonstone"],
         "description": "Create protective circles that contain and amplify magical energies."
       },
       {
@@ -172,7 +172,7 @@
         "color": "Rainbow",
         "hex": "#FF6B6B",
         "focus": "Multi-Element Fusion",
-        "gemstones": ["tourmaline", "emerald", "ruby", "sapphire"],
+        "gemstones": ["tourmaline", "ruby", "sapphire"],
         "description": "Converge multiple elemental forces into a unified powerful effect."
       },
       {
@@ -182,7 +182,7 @@
         "color": "Aqua",
         "hex": "#00CED1",
         "focus": "Continuous Flow",
-        "gemstones": ["prismarine_shard", "aquamarine", "lapis_lazuli"],
+        "gemstones": ["aquamarine"],
         "description": "Generate continuous streams of magical energy or resources."
       },
       {
@@ -192,7 +192,7 @@
         "color": "Silver",
         "hex": "#C0C0C0",
         "focus": "Dimension Manipulation",
-        "gemstones": ["tanzanite", "amethyst_shard"],
+        "gemstones": ["tanzanite"],
         "description": "Manipulate the fabric between planes and dimensions."
       },
       {
@@ -202,7 +202,7 @@
         "color": "Prismatic",
         "hex": "#E0E0E0",
         "focus": "World Alteration",
-        "gemstones": ["diamond", "nether_quartz", "tourmaline"],
+        "gemstones": ["tourmaline"],
         "description": "Anchor or alter the fundamental laws of reality itself."
       },
       {
@@ -212,7 +212,7 @@
         "color": "Golden White",
         "hex": "#FFF9E3",
         "focus": "Life Restoration",
-        "gemstones": ["diamond", "rhodonite", "citrine"],
+        "gemstones": ["rhodonite", "citrine"],
         "description": "Restore life to the fallen through powerful necromantic rituals."
       },
       {
@@ -242,7 +242,7 @@
         "color": "Bronze",
         "hex": "#CD7F32",
         "focus": "Time Manipulation",
-        "gemstones": ["amethyst_shard", "moonstone", "nether_quartz"],
+        "gemstones": ["moonstone"],
         "description": "Bend time itself to freeze, accelerate, or reverse temporal flow."
       },
       {
@@ -268,19 +268,6 @@
     ],
     "gemstones": [
       {
-        "id": "amethyst_shard",
-        "name": "Amethyst Shard",
-        "color": "Purple",
-        "hex": "#9966CC",
-        "shape": "crystal",
-        "rarity": "uncommon",
-        "magical_affinity": "arcane",
-        "spell_schools": ["arcane"],
-        "ritual_categories": ["temporal", "planar"],
-        "description": "Crystalline shards harvested from amethyst geodes. Resonates with arcane frequencies and amplifies spell power. Essential component for crafting enchantment tables and mystical focus items.",
-        "img": "amethyst_shard.png"
-      },
-      {
         "id": "apatite",
         "name": "Apatite",
         "color": "Cyan Blue",
@@ -298,7 +285,7 @@
         "name": "Aquamarine",
         "color": "Light Blue",
         "hex": "#7DD3E8",
-        "shape": "diamond",
+        "shape": "octagon",
         "rarity": "rare",
         "magical_affinity": "water",
         "spell_schools": ["water", "ice"],
@@ -333,32 +320,6 @@
         "img": "citrine.png"
       },
       {
-        "id": "diamond",
-        "name": "Diamond",
-        "color": "Cyan White",
-        "hex": "#5DCFCF",
-        "shape": "octagon",
-        "rarity": "legendary",
-        "magical_affinity": "durability",
-        "spell_schools": ["light", "air"],
-        "ritual_categories": ["ascension", "circle", "reality", "resurrection"],
-        "description": "The most durable gemstone in the realm. Grants unbreakable enchantments, maximum tool efficiency, and superior armor protection. Foundation of high-tier magical equipment and artifacts.",
-        "img": "diamond.png"
-      },
-      {
-        "id": "emerald",
-        "name": "Emerald",
-        "color": "Vibrant Green",
-        "hex": "#50C878",
-        "shape": "octagon",
-        "rarity": "rare",
-        "magical_affinity": "nature",
-        "spell_schools": ["nature"],
-        "ritual_categories": ["elemental"],
-        "description": "Prized green gemstone valued by villagers and mages alike. Channels nature magic, enhances crop growth spells, and powers trading enchantments. Core component in fortune artifacts.",
-        "img": "emerald.png"
-      },
-      {
         "id": "hematite",
         "name": "Hematite",
         "color": "Metallic Gray",
@@ -385,19 +346,6 @@
         "img": "jade.png"
       },
       {
-        "id": "lapis_lazuli",
-        "name": "Lapis Lazuli",
-        "color": "Deep Blue",
-        "hex": "#1E488F",
-        "shape": "round",
-        "rarity": "uncommon",
-        "magical_affinity": "enchantment",
-        "spell_schools": ["arcane"],
-        "ritual_categories": ["fountain"],
-        "description": "Sacred blue stone flecked with golden pyrite. The fundamental catalyst for all enchantment processes. Fuels enchanting tables and amplifies magical inscription power.",
-        "img": "lapis_lazuli.png"
-      },
-      {
         "id": "moonstone",
         "name": "Moonstone",
         "color": "Pearly White",
@@ -411,19 +359,6 @@
         "img": "moonstone.png"
       },
       {
-        "id": "nether_quartz",
-        "name": "Nether Quartz",
-        "color": "Cream White",
-        "hex": "#E4D4C8",
-        "shape": "crystal",
-        "rarity": "uncommon",
-        "magical_affinity": "nether",
-        "spell_schools": [],
-        "ritual_categories": ["reality", "temporal"],
-        "description": "Pale crystalline mineral harvested from the Nether wastes. Powers redstone mechanisms, channels nether magic, and crafts daylight sensors. Essential for comparative enchantments.",
-        "img": "nether_quartz.png"
-      },
-      {
         "id": "peridot",
         "name": "Peridot",
         "color": "Lime Green",
@@ -435,19 +370,6 @@
         "ritual_categories": ["transformation"],
         "description": "Volcanic green crystal formed in extreme heat. Channels earth magic and explosive spells. Used in blast protection enchantments and geomancy rituals.",
         "img": "peridot.png"
-      },
-      {
-        "id": "prismarine_shard",
-        "name": "Prismarine Shard",
-        "color": "Aqua Teal",
-        "hex": "#5AB5A5",
-        "shape": "crystal",
-        "rarity": "rare",
-        "magical_affinity": "ocean",
-        "spell_schools": ["water"],
-        "ritual_categories": ["fountain"],
-        "description": "Mystical fragments from ocean monuments and guardian creatures. Channels deep sea magic, grants underwater vision, and powers conduit structures. Essential for aquatic dominion.",
-        "img": "prismarine_shard.png"
       },
       {
         "id": "rhodonite",

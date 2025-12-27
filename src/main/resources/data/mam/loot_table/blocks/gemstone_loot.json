@@ -11,36 +11,15 @@
             { "type": "minecraft:item", "name": "mam:carnelian", "weight": 80 },
             { "type": "minecraft:item", "name": "mam:citrine", "weight": 80 },
             { "type": "minecraft:item", "name": "mam:jade", "weight": 80 },
-            { "type": "minecraft:item", "name": "mam:lapis_gem", "weight": 70 },
-            {
-              "type": "minecraft:item",
-              "name": "mam:quartz_gem",
-              "weight": 70
-            },
             { "type": "minecraft:item", "name": "mam:peridot", "weight": 60 },
             { "type": "minecraft:item", "name": "mam:sodalite", "weight": 60 },
-            {
-              "type": "minecraft:item",
-              "name": "mam:amethyst_gem",
-              "weight": 40
-            },
             { "type": "minecraft:item", "name": "mam:apatite", "weight": 35 },
             {
               "type": "minecraft:item",
               "name": "mam:aquamarine",
               "weight": 30
             },
-            {
-              "type": "minecraft:item",
-              "name": "mam:emerald_gem",
-              "weight": 25
-            },
             { "type": "minecraft:item", "name": "mam:moonstone", "weight": 20 },
-            {
-              "type": "minecraft:item",
-              "name": "mam:prismarine_gem",
-              "weight": 20
-            },
             { "type": "minecraft:item", "name": "mam:rhodonite", "weight": 15 },
             {
               "type": "minecraft:item",
@@ -50,12 +29,7 @@
             { "type": "minecraft:item", "name": "mam:topaz", "weight": 8 },
             { "type": "minecraft:item", "name": "mam:ruby", "weight": 6 },
             { "type": "minecraft:item", "name": "mam:sapphire", "weight": 6 },
-            { "type": "minecraft:item", "name": "mam:tanzanite", "weight": 2 },
-            {
-              "type": "minecraft:item",
-              "name": "mam:arcane_diamond",
-              "weight": 1
-            }
+            { "type": "minecraft:item", "name": "mam:tanzanite", "weight": 2 }
           ]
         }
       ]

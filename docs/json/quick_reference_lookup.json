@@ -1,320 +1,80 @@
 {
   "school_to_gemstones": {
-    "arcane": [
-      "Amethyst Shard",
-      "Lapis Lazuli",
-      "Tanzanite"
-    ],
-    "water": [
-      "Apatite",
-      "Aquamarine",
-      "Prismarine Shard"
-    ],
-    "ice": [
-      "Apatite",
-      "Aquamarine",
-      "Sapphire"
-    ],
-    "fire": [
-      "Carnelian",
-      "Ruby",
-      "Topaz"
-    ],
-    "blood": [
-      "Carnelian",
-      "Ruby"
-    ],
-    "light": [
-      "Citrine",
-      "Diamond",
-      "Topaz"
-    ],
-    "thunder": [
-      "Citrine",
-      "Topaz"
-    ],
-    "air": [
-      "Diamond",
-      "Moonstone"
-    ],
-    "nature": [
-      "Emerald",
-      "Jade",
-      "Peridot"
-    ],
-    "earth": [
-      "Hematite",
-      "Jade",
-      "Peridot"
-    ],
-    "dark": [
-      "Hematite",
-      "Sodalite"
-    ],
-    "void": [
-      "Hematite",
-      "Tanzanite"
-    ],
-    "chaos": [
-      "Rhodonite",
-      "Tourmaline"
-    ]
+    "arcane": ["Tanzanite"],
+    "water": ["Apatite", "Aquamarine"],
+    "ice": ["Apatite", "Aquamarine", "Sapphire"],
+    "fire": ["Carnelian", "Ruby", "Topaz"],
+    "blood": ["Carnelian", "Ruby"],
+    "light": ["Citrine", "Topaz"],
+    "thunder": ["Citrine", "Topaz"],
+    "air": ["Moonstone"],
+    "nature": ["Jade", "Peridot"],
+    "earth": ["Hematite", "Jade", "Peridot"],
+    "dark": ["Hematite", "Sodalite"],
+    "void": ["Hematite", "Tanzanite"],
+    "chaos": ["Rhodonite", "Tourmaline"]
   },
   "ritual_to_gemstones": {
-    "temporal": [
-      "Amethyst Shard",
-      "Moonstone",
-      "Nether Quartz"
-    ],
-    "planar": [
-      "Amethyst Shard",
-      "Tanzanite"
-    ],
-    "vortex": [
-      "Apatite",
-      "Sodalite"
-    ],
-    "fountain": [
-      "Apatite",
-      "Aquamarine",
-      "Lapis Lazuli",
-      "Prismarine Shard"
-    ],
-    "sacrifice": [
-      "Carnelian",
-      "Hematite",
-      "Ruby"
-    ],
-    "ascension": [
-      "Citrine",
-      "Diamond",
-      "Topaz"
-    ],
-    "resurrection": [
-      "Citrine",
-      "Diamond",
-      "Rhodonite"
-    ],
-    "circle": [
-      "Diamond",
-      "Moonstone"
-    ],
-    "reality": [
-      "Diamond",
-      "Nether Quartz",
-      "Tourmaline"
-    ],
-    "elemental": [
-      "Emerald",
-      "Ruby",
-      "Sapphire",
-      "Tourmaline"
-    ],
-    "summoning": [
-      "Hematite",
-      "Sodalite",
-      "Tanzanite"
-    ],
-    "transformation": [
-      "Jade",
-      "Peridot",
-      "Tourmaline"
-    ],
-    "cosmic": [
-      "Moonstone",
-      "Sapphire",
-      "Tanzanite"
-    ]
+    "temporal": ["Moonstone"],
+    "planar": ["Tanzanite"],
+    "vortex": ["Apatite", "Sodalite"],
+    "fountain": ["Apatite", "Aquamarine"],
+    "sacrifice": ["Carnelian", "Hematite", "Ruby"],
+    "ascension": ["Citrine", "Topaz"],
+    "resurrection": ["Citrine", "Rhodonite"],
+    "circle": ["Moonstone"],
+    "reality": ["Tourmaline"],
+    "elemental": ["Ruby", "Sapphire", "Tourmaline"],
+    "summoning": ["Hematite", "Sodalite", "Tanzanite"],
+    "transformation": ["Jade", "Peridot", "Tourmaline"],
+    "cosmic": ["Moonstone", "Sapphire", "Tanzanite"]
   },
   "gemstone_to_schools": {
-    "Amethyst Shard": [
-      "arcane"
-    ],
-    "Apatite": [
-      "water",
-      "ice"
-    ],
-    "Aquamarine": [
-      "water",
-      "ice"
-    ],
-    "Carnelian": [
-      "fire",
-      "blood"
-    ],
-    "Citrine": [
-      "light",
-      "thunder"
-    ],
-    "Diamond": [
-      "light",
-      "air"
-    ],
-    "Emerald": [
-      "nature"
-    ],
-    "Hematite": [
-      "earth",
-      "dark",
-      "void"
-    ],
-    "Jade": [
-      "nature",
-      "earth"
-    ],
-    "Lapis Lazuli": [
-      "arcane"
-    ],
-    "Moonstone": [
-      "air"
-    ],
-    "Nether Quartz": [],
-    "Peridot": [
-      "nature",
-      "earth"
-    ],
-    "Prismarine Shard": [
-      "water"
-    ],
-    "Rhodonite": [
-      "chaos"
-    ],
-    "Ruby": [
-      "fire",
-      "blood"
-    ],
-    "Sapphire": [
-      "ice"
-    ],
-    "Sodalite": [
-      "dark"
-    ],
-    "Tanzanite": [
-      "void",
-      "arcane"
-    ],
-    "Topaz": [
-      "light",
-      "thunder",
-      "fire"
-    ],
-    "Tourmaline": [
-      "chaos"
-    ]
+    "Amethyst Shard": ["arcane"],
+    "Apatite": ["water", "ice"],
+    "Aquamarine": ["water", "ice"],
+    "Carnelian": ["fire", "blood"],
+    "Citrine": ["light", "thunder"],
+    "Hematite": ["earth", "dark", "void"],
+    "Jade": ["nature", "earth"],
+    "Moonstone": ["air"],
+    "Peridot": ["nature", "earth"],
+    "Rhodonite": ["chaos"],
+    "Ruby": ["fire", "blood"],
+    "Sapphire": ["ice"],
+    "Sodalite": ["dark"],
+    "Tanzanite": ["void", "arcane"],
+    "Topaz": ["light", "thunder", "fire"],
+    "Tourmaline": ["chaos"]
   },
   "gemstone_to_rituals": {
-    "Amethyst Shard": [
-      "temporal",
-      "planar"
-    ],
-    "Apatite": [
-      "vortex",
-      "fountain"
-    ],
-    "Aquamarine": [
-      "fountain"
-    ],
-    "Carnelian": [
-      "sacrifice"
-    ],
-    "Citrine": [
-      "ascension",
-      "resurrection"
-    ],
-    "Diamond": [
-      "ascension",
-      "circle",
-      "reality",
-      "resurrection"
-    ],
-    "Emerald": [
-      "elemental"
-    ],
-    "Hematite": [
-      "sacrifice",
-      "summoning"
-    ],
-    "Jade": [
-      "transformation"
-    ],
-    "Lapis Lazuli": [
-      "fountain"
-    ],
-    "Moonstone": [
-      "circle",
-      "cosmic",
-      "temporal"
-    ],
-    "Nether Quartz": [
-      "reality",
-      "temporal"
-    ],
-    "Peridot": [
-      "transformation"
-    ],
-    "Prismarine Shard": [
-      "fountain"
-    ],
-    "Rhodonite": [
-      "resurrection"
-    ],
-    "Ruby": [
-      "elemental",
-      "sacrifice"
-    ],
-    "Sapphire": [
-      "elemental",
-      "cosmic"
-    ],
-    "Sodalite": [
-      "summoning",
-      "vortex"
-    ],
-    "Tanzanite": [
-      "planar",
-      "cosmic",
-      "summoning"
-    ],
-    "Topaz": [
-      "ascension"
-    ],
-    "Tourmaline": [
-      "elemental",
-      "reality",
-      "transformation"
-    ]
+    "Apatite": ["vortex", "fountain"],
+    "Aquamarine": ["fountain"],
+    "Carnelian": ["sacrifice"],
+    "Citrine": ["ascension", "resurrection"],
+    "Hematite": ["sacrifice", "summoning"],
+    "Jade": ["transformation"],
+    "Moonstone": ["circle", "cosmic", "temporal"],
+    "Peridot": ["transformation"],
+    "Rhodonite": ["resurrection"],
+    "Ruby": ["elemental", "sacrifice"],
+    "Sapphire": ["elemental", "cosmic"],
+    "Sodalite": ["summoning", "vortex"],
+    "Tanzanite": ["planar", "cosmic", "summoning"],
+    "Topaz": ["ascension"],
+    "Tourmaline": ["elemental", "reality", "transformation"]
   },
   "rarity_distribution": {
-    "legendary": [
-      "Diamond"
-    ],
-    "epic": [
-      "Ruby",
-      "Sapphire",
-      "Tanzanite"
-    ],
+    "epic": ["Ruby", "Sapphire", "Tanzanite"],
     "rare": [
       "Apatite",
       "Aquamarine",
-      "Emerald",
       "Moonstone",
-      "Prismarine Shard",
       "Rhodonite",
       "Topaz",
       "Tourmaline"
     ],
-    "uncommon": [
-      "Amethyst Shard",
-      "Carnelian",
-      "Citrine",
-      "Jade",
-      "Lapis Lazuli",
-      "Nether Quartz",
-      "Peridot",
-      "Sodalite"
-    ],
-    "common": [
-      "Hematite"
-    ]
+    "uncommon": ["Carnelian", "Citrine", "Jade", "Peridot", "Sodalite"],
+    "common": ["Hematite"]
   }
 }

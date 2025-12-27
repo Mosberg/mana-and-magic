@@ -33,34 +33,19 @@ public final class MamItems {
         public static final GemstoneItem CITRINE =
                         register("citrine", GemstoneRarity.UNCOMMON, GemstoneSchool.LIGHT);
         public static final GemstoneItem JADE =
-                        register("jade", GemstoneRarity.UNCOMMON, GemstoneSchool.EARTH);
-        public static final GemstoneItem LAPIS_GEM =
-                        register("lapis_gem", GemstoneRarity.UNCOMMON, GemstoneSchool.ARCANE); // ≠
-                                                                                               // lapis_lazuli
-        public static final GemstoneItem QUARTZ_GEM =
-                        register("quartz_gem", GemstoneRarity.UNCOMMON, GemstoneSchool.FIRE); // ≠
-                                                                                              // nether_quartz
+                        register("jade", GemstoneRarity.UNCOMMON, GemstoneSchool.EARTH); // nether_quartz
         public static final GemstoneItem PERIDOT =
                         register("peridot", GemstoneRarity.UNCOMMON, GemstoneSchool.NATURE);
         public static final GemstoneItem SODALITE =
                         register("sodalite", GemstoneRarity.UNCOMMON, GemstoneSchool.WATER);
 
-        // Rare Tier (8)
-        public static final GemstoneItem AMETHYST_GEM =
-                        register("amethyst_gem", GemstoneRarity.RARE, GemstoneSchool.VOID); // ≠
-                                                                                            // amethyst_shard
+        // Rare Tier (8) // amethyst_shard
         public static final GemstoneItem APATITE =
                         register("apatite", GemstoneRarity.RARE, GemstoneSchool.EARTH);
         public static final GemstoneItem AQUAMARINE =
-                        register("aquamarine", GemstoneRarity.RARE, GemstoneSchool.WATER);
-        public static final GemstoneItem EMERALD_GEM =
-                        register("emerald_gem", GemstoneRarity.RARE, GemstoneSchool.NATURE); // ≠
-                                                                                             // emerald
+                        register("aquamarine", GemstoneRarity.RARE, GemstoneSchool.WATER); // emerald
         public static final GemstoneItem MOONSTONE =
                         register("moonstone", GemstoneRarity.RARE, GemstoneSchool.LIGHT);
-        public static final GemstoneItem PRISMARINE_GEM =
-                        register("prismarine_gem", GemstoneRarity.RARE, GemstoneSchool.WATER); // ≠
-                                                                                               // prismarine_shard
         public static final GemstoneItem RHODONITE =
                         register("rhodonite", GemstoneRarity.RARE, GemstoneSchool.BLOOD);
         public static final GemstoneItem TOURMALINE =
@@ -77,9 +62,7 @@ public final class MamItems {
         // Legendary Tier (1)
         public static final GemstoneItem TANZANITE =
                         register("tanzanite", GemstoneRarity.LEGENDARY, GemstoneSchool.CHAOS);
-        public static final GemstoneItem ARCANE_DIAMOND =
-                        register("arcane_diamond", GemstoneRarity.LEGENDARY, GemstoneSchool.LIGHT); // ≠
-                                                                                                    // diamond
+        // diamond
 
         private MamItems() {
                 throw new AssertionError("Utility class");
