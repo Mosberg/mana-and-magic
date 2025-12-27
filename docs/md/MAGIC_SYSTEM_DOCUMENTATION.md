@@ -1,4 +1,4 @@
-# Minecraft Arcane Magic System - Complete Reference
+# Arcane Magic System - Mana and Magic
 
 **Version:** 1.0.0
 **Namespace:** `mam`
@@ -8,7 +8,7 @@
 
 ## 📚 Table of Contents
 
-- [Minecraft Arcane Magic System - Complete Reference](#minecraft-arcane-magic-system---complete-reference)
+- [Arcane Magic System - Mana and Magic](#arcane-magic-system---mana-and-magic)
   - [📚 Table of Contents](#-table-of-contents)
   - [🔮 Spell Schools](#-spell-schools)
   - [🌟 Ritual Categories](#-ritual-categories)
