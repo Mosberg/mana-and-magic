@@ -1,14 +1,21 @@
-# Arcane Magic System - Mana and Magic
+# Mana and Magic: Arcane Magic System (Minecraft Fabric Mod)
 
 **Version:** 1.0.0
 **Namespace:** `mam`
-**Total Systems:** 13 Spell Schools | 13 Ritual Categories | 15 Gemstone Variants
+**Content:** 13 Spell Schools | 13 Ritual Categories | 15 Gemstone Variants
+
+---
+
+## 🧭 Project Overview
+
+Mana and Magic is a hybrid data-driven Minecraft mod for Fabric, featuring a deep magic system with spells, rituals, and gemstones. All gameplay content is defined in JSON and CSV, with Java code for registration and custom logic. See [docs/md/MAGIC_SYSTEM_DOCUMENTATION.md](docs/md/MAGIC_SYSTEM_DOCUMENTATION.md) for canonical details.
 
 ---
 
 ## 📚 Table of Contents
 
-- [Arcane Magic System - Mana and Magic](#arcane-magic-system---mana-and-magic)
+- [Mana and Magic: Arcane Magic System (Minecraft Fabric Mod)](#mana-and-magic-arcane-magic-system-minecraft-fabric-mod)
+  - [🧭 Project Overview](#-project-overview)
   - [📚 Table of Contents](#-table-of-contents)
   - [🔮 Spell Schools](#-spell-schools)
   - [🌟 Ritual Categories](#-ritual-categories)
@@ -31,6 +38,9 @@
     - [Intermediate Gemstones (Levels 11-30)](#intermediate-gemstones-levels-11-30)
     - [Advanced Gemstones (Levels 31-50)](#advanced-gemstones-levels-31-50)
     - [Expert Gemstones (Levels 51+)](#expert-gemstones-levels-51)
+  - [🚀 Quickstart \& Build](#-quickstart--build)
+  - [🤝 Contributing](#-contributing)
+  - [📖 Documentation](#-documentation)
 
 ---
 
@@ -373,6 +383,35 @@ Apatite, Aquamarine, Topaz, Rhodonite, Tourmaline
 
 Ruby, Sapphire, Tanzanite
 
-**Last Updated**: December 27, 2025
-**Mod Author**: Mosberg
-**License**: All Rights Reserved
+---
+
+## 🚀 Quickstart & Build
+
+1. Install Java 21 and Fabric 0.18.3.
+2. Clone this repo and run:
+
+- `./gradlew build` (output: `build/libs/`)
+- `./gradlew runClient` or `./gradlew runServer`
+- `./gradlew test` for tests
+
+1. In-game, use `/reload` to refresh data packs.
+2. See logs in `logs/latest.log`.
+
+## 🤝 Contributing
+
+- All gameplay content is data-driven. Update `docs/` (CSV, JSON, MD) first, then JSON/data, then Java/assets.
+- Use canonical IDs from `docs/csv/` and cross-check with [MAGIC_SYSTEM_DOCUMENTATION.md](docs/md/MAGIC_SYSTEM_DOCUMENTATION.md).
+- Follow naming conventions: PascalCase (Java classes), camelCase (methods), UPPER_SNAKE_CASE (constants), snake_case (JSON IDs).
+- Always copy an existing gemstone/spell/ritual file as a template for new content.
+
+## 📖 Documentation
+
+- See [docs/md/MAGIC_SYSTEM_DOCUMENTATION.md](docs/md/MAGIC_SYSTEM_DOCUMENTATION.md) for the full system, mappings, and cross-links.
+- See [docs/csv/](docs/csv/) and [docs/json/](docs/json/) for canonical data.
+- For AI/automation, see [.github/copilot-instructions.md](.github/copilot-instructions.md).
+
+---
+
+**Last Updated:** December 28, 2025
+**Mod Author:** Mosberg
+**License:** All Rights Reserved
