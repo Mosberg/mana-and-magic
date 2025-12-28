@@ -4,16 +4,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
 import dk.mosberg.mam.registry.MamItems;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 
 /**
- * Comprehensive test suite for 15 gemstone system validation. Uses only JUnit Jupiter API (no
+ * Comprehensive test suite for 15 gemstone system validation. Uses only JUnit
+ * Jupiter API (no
  * parameterized tests or external dependencies).
  *
  * @author Mosberg
@@ -23,6 +30,40 @@ import dk.mosberg.mam.registry.MamItems;
 @DisplayName("Gemstone System Tests (15 Variants)")
 @Tag("fast")
 class GemstoneTest {
+
+    @Test
+    @DisplayName("Should register all 15 gemstones successfully")
+    void testGemstoneRegistration() {
+        assertNotNull(MamItems.HEMATITE);
+        assertNotNull(MamItems.CARNELIAN);
+        assertNotNull(MamItems.CITRINE);
+        assertNotNull(MamItems.JADE);
+        assertNotNull(MamItems.PERIDOT);
+        assertNotNull(MamItems.SODALITE);
+        assertNotNull(MamItems.APATITE);
+        assertNotNull(MamItems.AQUAMARINE);
+        assertNotNull(MamItems.MOONSTONE);
+        assertNotNull(MamItems.RHODONITE);
+        assertNotNull(MamItems.TOPAZ);
+        assertNotNull(MamItems.TOURMALINE);
+        assertNotNull(MamItems.RUBY);
+        assertNotNull(MamItems.SAPPHIRE);
+        assertNotNull(MamItems.TANZANITE);
+    }
+
+    @Test
+    @DisplayName("Should generate correct tooltips with rarity colors")
+    void testTooltipGeneration() {
+        ItemStack rubyStack = new ItemStack(MamItems.RUBY);
+        List<Text> tooltip = new ArrayList<>();
+        MamItems.RUBY.TooltipContext(rubyStack, null, tooltip, null);
+        assertTrue(tooltip.stream().anyMatch(
+                line -> line.getString().contains("Rarity:") && line.getString().contains("Epic")),
+                "Tooltip should contain Epic rarity line");
+        assertTrue(tooltip.stream().anyMatch(
+                line -> line.getString().contains("Affinity:") && line.getString().contains("Fire")),
+                "Tooltip should contain Fire affinity line");
+    }
 
     @Test
     @DisplayName("Should have exactly 15 gemstone variants")
