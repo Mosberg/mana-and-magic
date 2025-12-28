@@ -1,6 +1,6 @@
-# Test Suite Documentation
+# Mana and Magic Test Suite
 
-This directory contains the test suite for Mana and Magic mod.
+This directory contains all automated tests for the Mana and Magic mod. The suite ensures core logic, data-driven content, and integration points are robust and regression-free.
 
 ## 🧪 Test Structure
 
@@ -9,18 +9,17 @@ src/test/java/
 └── dk/mosberg/mam/
     ├── ManaAndMagicTest.java         # Core mod tests
     ├── spell/
-    │   └── SpellCastingTest.java     # Spell system tests (Mockito)
+    │   └── SpellCastingTest.java     # Spell system tests
     └── gemstone/
-        └── GemstoneTest.java         # Gemstone tests (AssertJ)
+        └── GemstoneTest.java         # Gemstone system tests
 ```
 
 ## 🔧 Testing Frameworks
 
 ### JUnit 5 (Jupiter)
 
-- **Purpose**: Core testing framework
-- **Version**: 5.11.4
-- **Usage**: Basic assertions and test structure
+- **Purpose:** Core testing framework
+- **Usage:** Assertions, test structure, lifecycle
 
 ```java
 @Test
@@ -30,11 +29,10 @@ void testSomething() {
 }
 ```
 
-### Mockito
+### Mockito (if used)
 
-- **Purpose**: Mocking framework
-- **Version**: 5.15.2
-- **Usage**: Mock objects for isolated testing
+- **Purpose:** Mocking for isolated logic
+- **Usage:** Use mocks only for integration or network logic
 
 ```java
 @Mock
@@ -44,11 +42,9 @@ when(mockPlayer.getMana()).thenReturn(100.0);
 verify(mockPlayer, times(1)).consumeMana(20.0);
 ```
 
-### AssertJ
+### AssertJ (if used)
 
-- **Purpose**: Fluent assertions
-- **Version**: 3.27.3
-- **Usage**: Readable, chainable assertions
+- **Purpose:** Fluent, readable assertions
 
 ```java
 assertEquals(value)
@@ -57,45 +53,45 @@ assertEquals(value)
     .isLessThan(100);
 ```
 
+---
+
 ## 🚀 Running Tests
 
-### Run All Tests
+**Run all tests:**
 
-```bash
+```sh
 ./gradlew test
 ```
 
-### Run Specific Test Class
+**Run a specific test class:**
 
-```bash
-./gradlew test --tests ManaAndMagicTest
+```sh
+./gradlew test --tests dk.mosberg.mam.ManaAndMagicTest
 ```
 
-### Run with Coverage
+**Run with coverage:**
 
-```bash
+```sh
 ./gradlew test jacocoTestReport
 ```
 
-### View Test Report
-
+**View HTML report:**
 Open `build/reports/tests/test/index.html` in your browser.
 
-## 📝 Writing Tests
+---
 
-### Test Naming Convention
+## 📝 Writing & Organizing Tests
+
+### Naming & Structure
 
 - Class: `<ClassUnderTest>Test.java`
 - Method: `test<MethodName>` or descriptive name
-- Use `@DisplayName` for human-readable names
+- Use `@DisplayName` for clarity
+- Use `@Nested` for grouping
+- Use `@BeforeEach`/`@AfterEach` for setup/teardown
+- Use `@ParameterizedTest` for input variation
 
-### Test Organization
-
-- Use `@Nested` classes for grouping related tests
-- Use `@BeforeEach` and `@AfterEach` for setup/teardown
-- Use `@ParameterizedTest` for testing multiple inputs
-
-### Example Test
+### Example
 
 ```java
 @Test
@@ -115,15 +111,19 @@ void testDamageCalculation() {
 }
 ```
 
+---
+
 ## ✅ Test Coverage Goals
 
-- **Minimum**: 70% code coverage
-- **Target**: 85% code coverage
-- **Critical paths**: 100% coverage
+- **Minimum:** 70%
+- **Target:** 85%
+- **Critical paths:** 100%
+
+---
 
 ## 🎯 What to Test
 
-### Must Test
+**Must Test:**
 
 - Spell casting logic
 - Mana calculations
@@ -132,37 +132,39 @@ void testDamageCalculation() {
 - World generation
 - Network packets
 
-### Should Test
+**Should Test:**
 
-- Configuration loading
+- Config loading
 - Data serialization
 - Event handlers
 - Utility methods
 
-### Optional
+**Optional:**
 
-- Rendering code (test manually)
+- Rendering code (manual)
 - Client-only features
-- Performance benchmarks
+- Performance/benchmarks
 
-## 🐛 Debugging Tests
+---
 
-### Run Tests in Debug Mode
+## 🐛 Debugging & Tips
 
-```bash
+**Debug mode:**
+
+```sh
 ./gradlew test --debug-jvm
 ```
 
-### Enable Detailed Logging
+**Detailed logging:**
 
-```bash
+```sh
 ./gradlew test --info
 ```
 
-### Run Single Test Method
+**Run single test method:**
 
-```bash
-./gradlew test --tests "ManaAndMagicTest.testModId"
+```sh
+./gradlew test --tests "dk.mosberg.mam.ManaAndMagicTest.testModId"
 ```
 
 ---
