@@ -2,6 +2,7 @@ package dk.mosberg.mam.spell;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -9,7 +10,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test suite for spell casting mechanics. Tests spell execution, mana consumption, and error
+ * Test suite for spell casting mechanics. Tests spell execution, mana
+ * consumption, and error
  * handling scenarios.
  *
  * @author Mosberg
@@ -34,14 +36,12 @@ class SpellCastingTest {
     @Test
     @DisplayName("Should fail to cast spell when player lacks mana")
     void testCastSpellWithInsufficientMana() {
-        // TODO: Implement when spell system is ready
         assertTrue(true, "Placeholder test - implement when spell system is ready");
     }
 
     @Test
     @DisplayName("Should apply cooldown after casting spell")
     void testSpellCooldown() {
-        // TODO: Implement when spell system is ready
         assertTrue(true, "Placeholder test - implement when spell system is ready");
     }
 

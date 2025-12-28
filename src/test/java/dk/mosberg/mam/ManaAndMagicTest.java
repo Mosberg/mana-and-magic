@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,7 +15,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**
- * Comprehensive test suite demonstrating JUnit 6 features for the Magic System. Tests mod
+ * Comprehensive test suite demonstrating JUnit 6 features for the Magic System.
+ * Tests mod
  * initialization, configuration, and basic validation logic.
  *
  * @author Mosberg
@@ -64,12 +66,11 @@ class ManaAndMagicTest {
         assertNotNull(ManaAndMagic.LOGGER);
     }
 
-
     @Test
     @DisplayName("Should validate spell school names")
     void testSpellSchoolNames() {
-        String[] spellSchools = {"Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
-                "Light", "Nature", "Thunder", "Void", "Water"};
+        String[] spellSchools = { "Air", "Arcane", "Blood", "Chaos", "Dark", "Earth", "Fire", "Ice",
+                "Light", "Nature", "Thunder", "Void", "Water" };
         for (String school : spellSchools) {
             validateSpellSchoolName(school);
         }
@@ -125,9 +126,9 @@ class ManaAndMagicTest {
         @Test
         @DisplayName("Should validate ritual names")
         void testRitualNames() {
-            String[] ritualNames = {"Ascension", "Circle", "Cosmic", "Elemental", "Fountain",
+            String[] ritualNames = { "Ascension", "Circle", "Cosmic", "Elemental", "Fountain",
                     "Planar", "Reality", "Resurrection", "Sacrifice", "Summoning", "Temporal",
-                    "Transformation", "Vortex"};
+                    "Transformation", "Vortex" };
             assertEquals(13, ritualNames.length, "Should have 13 ritual types");
             for (String name : ritualNames) {
                 assertNotNull(name);

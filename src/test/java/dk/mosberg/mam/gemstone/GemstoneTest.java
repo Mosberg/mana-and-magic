@@ -362,7 +362,7 @@ class GemstoneTest {
     class BalanceTests {
 
         @Test
-        @DisplayName("Total loot weight should sum to 553")
+        @DisplayName("Total loot weight should sum to 535")
         void testTotalLootWeight() {
             int totalWeight = (1 * 100) + // Common: 1 gem × 100 weight
                     (5 * 60) + // Uncommon: 5 gems × 60 weight
